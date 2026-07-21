@@ -8,15 +8,22 @@
     
     <style>
         /* =========================================================
-           ⚡ UI/UX THEME: TRENDY EDGY (NEO-BRUTALISM) ⚡
+           ✨ UI/UX THEME: CLEAN PASTEL MINIMALIST
            ========================================================= */
         :root {
             --bg-color: #fcfcf9;          /* Off-white background */
-            --text-main: #111111;         /* Solid black text */
-            --border-color: #111111;      /* Hard black borders */
-            --green-accent: #00e572;      /* Vibrant green */
-            --yellow-accent: #ffde59;     /* Vibrant yellow */
-            --orange-accent: #ff6a13;     /* Punchy orange */
+            --card-bg: #ffffff;           /* Pure white for cards */
+            --text-main: #1f2937;         /* Deep dark grey for text */
+            --text-muted: #4b5563;        /* Muted grey for descriptions */
+            --border-color: #e5e7eb;      /* Subtle clean border */
+            
+            /* Palet Warna dari Gambar */
+            --strawberry: #FBD1C3;
+            --jonquil: #E9F299;
+            --slimlime: #AEE2BE;
+            --onahau: #C2EDF3;
+            --lilac: #E3BBDD;
+            --xoxo: #F68DA1;
         }
 
         * {
@@ -24,217 +31,197 @@
         }
 
         body {
-            font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
-            background-size: 20px 20px;
+            line-height: 1.7;
         }
 
         .portfolio-container {
-            max-width: 900px;
-            margin: 50px auto;
-            background: #ffffff;
-            border: 3px solid var(--border-color);
-            border-radius: 12px;
-            box-shadow: 8px 8px 0px var(--border-color);
+            max-width: 850px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
             overflow: hidden;
+            border: 1px solid var(--border-color);
         }
 
-        /* HEADER EDGY STYLE */
+        /* HEADER CLEAN PASTEL */
         .portfolio-header {
-            background: var(--orange-accent);
+            background: var(--lilac);
             color: var(--text-main);
-            padding: 3.5rem 2.5rem;
-            border-bottom: 3px solid var(--border-color);
+            padding: 4rem 3rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
         }
         .portfolio-header h1 {
             margin: 0 0 10px 0;
-            font-size: 2.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: -1px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
         .portfolio-meta {
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: 0.95rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 4px 12px;
+            border-radius: 20px;
             margin-bottom: 1.5rem;
             display: inline-block;
-            background: #ffffff;
-            padding: 5px 15px;
-            border: 2px solid var(--border-color);
-            border-radius: 50px;
         }
         .catchy-bio {
-            font-size: 1.2rem;
-            font-weight: 600;
-            background: var(--yellow-accent);
-            padding: 18px 25px;
-            border: 3px solid var(--border-color);
-            border-radius: 8px;
-            box-shadow: 4px 4px 0px var(--border-color);
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--text-main);
+            max-width: 700px;
             margin: 0;
+            line-height: 1.6;
+            background: var(--strawberry);
+            padding: 16px 20px;
+            border-radius: 10px;
         }
 
         .portfolio-content {
-            padding: 2.5rem;
+            padding: 3rem;
         }
 
         h2 {
             color: var(--text-main);
-            font-size: 1.6rem;
-            font-weight: 800;
+            font-size: 1.35rem;
+            font-weight: 700;
             text-transform: uppercase;
-            border-bottom: 4px solid var(--green-accent);
-            padding-bottom: 5px;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
             margin-top: 3rem;
-            margin-bottom: 1.2rem;
-            display: inline-block;
+            margin-bottom: 1.5rem;
         }
         h2:first-of-type { margin-top: 0; }
 
-        p { margin-bottom: 1rem; font-weight: 500; font-size: 1.05rem; }
+        p { margin-bottom: 1rem; color: var(--text-muted); font-size: 1.05rem; }
 
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            gap: 20px;
             margin-top: 1.5rem;
         }
 
-        /* CARD NEO-BRUTALISM */
+        /* CARD CLEAN STYLE */
         .card {
-            border: 3px solid var(--border-color);
+            border: 1px solid var(--border-color);
             padding: 1.8rem;
             border-radius: 12px;
-            background: #ffffff;
-            box-shadow: 6px 6px 0px var(--border-color);
+            background: var(--card-bg);
             transition: all 0.2s ease;
         }
         .card:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 9px 9px 0px var(--border-color);
+            border-color: var(--xoxo);
+            box-shadow: 0 4px 12px rgba(246, 141, 161, 0.15);
         }
         .card h3 {
             margin-top: 0;
             color: var(--text-main);
-            font-size: 1.25rem;
-            font-weight: 800;
+            font-size: 1.15rem;
+            font-weight: 700;
         }
 
         /* Link Deskripsi SEO */
         .seo-link-box {
-            background: var(--green-accent);
-            border: 3px solid var(--border-color);
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1.5rem;
             margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-            box-shadow: 5px 5px 0px var(--border-color);
-        }
-        .seo-link-box p {
-            margin: 0;
-            font-weight: 700;
-            font-size: 1.05rem;
         }
 
-        /* 5 Traits List Style */
+        /* Traits List Style */
         .traits-list {
             list-style: none;
             padding: 0;
             margin-top: 1.5rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            gap: 12px;
         }
         .traits-list li {
-            background: #ffffff;
-            border: 3px solid var(--border-color);
-            padding: 12px 18px;
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            padding: 12px 16px;
             border-radius: 8px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            box-shadow: 4px 4px 0px var(--border-color);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-main);
         }
         .traits-list li:nth-child(5) {
             grid-column: 1 / -1;
-            background: var(--yellow-accent);
+            background: var(--jonquil);
         }
 
         /* TAGS */
         .tag {
-            background: #ffffff;
+            background: var(--onahau);
             color: var(--text-main);
-            padding: 5px 12px;
-            border-radius: 5px;
-            font-size: 0.85rem;
-            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             margin-right: 6px;
-            border: 2px solid var(--border-color);
-            text-transform: uppercase;
         }
-        .tag-highlight {
-            background: var(--yellow-accent);
-        }
-        .tag-green {
-            background: var(--green-accent);
-        }
+        .tag-yellow { background: var(--jonquil); }
+        .tag-green { background: var(--slimlime); }
+        .tag-pink { background: var(--strawberry); }
 
-        a { color: var(--text-main); text-decoration: none; font-weight: 800; }
+        a { color: #0284c7; text-decoration: none; font-weight: 600; }
         a:hover { text-decoration: underline; }
 
         /* CTA BUTTONS */
         .cta-container {
             margin-top: 3.5rem;
             padding: 2.5rem;
-            background: var(--yellow-accent);
+            background: var(--strawberry);
             border-radius: 12px;
             text-align: center;
-            border: 3px solid var(--border-color);
-            box-shadow: 6px 6px 0px var(--border-color);
+            border: 1px solid var(--border-color);
         }
         .cta-btn {
             display: inline-block;
             background: var(--text-main);
             color: #ffffff;
-            padding: 14px 30px;
+            padding: 12px 28px;
             border-radius: 8px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-weight: 600;
+            font-size: 0.95rem;
             transition: all 0.2s;
-            margin: 10px;
-            border: 3px solid var(--border-color);
+            margin: 8px;
+            text-decoration: none;
         }
         .cta-btn:hover {
-            background: var(--green-accent);
+            background: var(--xoxo);
             color: var(--text-main);
-            transform: translate(-2px, -2px);
-            box-shadow: 4px 4px 0px var(--border-color);
             text-decoration: none;
         }
 
         footer {
             text-align: center;
             padding: 2rem;
-            font-weight: 700;
-            font-size: 0.9rem;
-            border-top: 3px solid var(--border-color);
-            background: #ffffff;
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            background: var(--card-bg);
         }
 
         @media (max-width: 768px) {
             .grid-2, .traits-list { grid-template-columns: 1fr; }
-            .portfolio-container { margin: 15px; border-radius: 8px; }
-            .seo-link-box { flex-direction: column; align-items: flex-start; }
+            .portfolio-container { margin: 10px; border-radius: 0; }
+            .portfolio-content { padding: 1.5rem; }
+            .portfolio-header { padding: 2.5rem 1.5rem; }
         }
     </style>
 </head>
@@ -245,7 +232,7 @@
     <!-- HEADER -->
     <div class="portfolio-header">
         <h1>Safira Hana R.</h1>
-        <div class="portfolio-meta">📍 Semarang, ID &bull; SEO Content Writer</div>
+        <div class="portfolio-meta">Semarang, ID &bull; SEO Content Writer</div>
         <p class="catchy-bio">
             "Nggak obral janji pasti rank satu, tapi siap meracik tulisan yang relevan, awet dibaca, dan pastinya ramah SEO."
         </p>
@@ -254,11 +241,11 @@
     <div class="portfolio-content">
 
         <!-- TENTANG AKU -->
-        <h2>📌 Tentang Aku</h2>
+        <h2>Tentang Aku</h2>
         <p>Halo, aku Safira. Sebagai penulis artikel, aku paling suka meracik konten <em>evergreen</em>. Tujuannya simpel aja, supaya artikel yang kutulis bisa terus bermanfaat dan relevan dalam jangka waktu yang lama. Meski begitu, aku tetap terbuka kalau harus nulis konten yang lagi tren.</p>
 
         <!-- PRINSIP KERJA -->
-        <h2>✨ Prinsip Kerja</h2>
+        <h2>Prinsip Kerja</h2>
         <ul class="traits-list">
             <li>🌱 Suka ngulik hal baru</li>
             <li>💬 Terbuka dengan kritik membangun</li>
@@ -268,70 +255,89 @@
         </ul>
 
         <!-- PENCAPAIAN SEO -->
-        <h2>🏆 Pencapaian SEO</h2>
+        <h2>Pencapaian SEO</h2>
         <div class="seo-link-box">
-            <p>📈 Beberapa artikel yang diriset dan ditulis secara organik berhasil menembus <strong>Peringkat 1 di Google</strong>.</p>
-            <a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank" style="background: #fff; padding: 8px 15px; border: 2px solid #111; border-radius: 5px;">Lihat Bukti &rarr;</a>
+            <p style="margin-bottom: 12px; font-size: 1rem; color: var(--text-main);">Beberapa artikel organik yang berhasil menembus <strong>Peringkat 1 di pencarian Google</strong>:</p>
+            <ul style="margin: 0; padding-left: 20px; font-weight: 500; line-height: 1.8; color: var(--text-main);">
+                <li><a href="https://www.goodnewsfromindonesia.id/2024/06/11/8-jenis-serabi-dengan-rasanya-yang-khas-dari-berbagai-daerah-di-indonesia" target="_blank">"jenis serabi"</a> — Good News From Indonesia</li>
+                <li><a href="https://www.sekawanmedia.co.id/blog/tanda-website-kena-hack/" target="_blank">"website kena hack"</a> — Sekawan Media</li>
+                <li><a href="https://www.sekawanmedia.co.id/blog/kapan-bisnis-membutuhkan-jasa-pembuatan-aplikasi-custom/" target="_blank">"kapan bisnis butuh aplikasi custom"</a> — Sekawan Media</li>
+            </ul>
         </div>
 
-        <!-- HASIL KARYA -->
-        <h2>📂 Portofolio Web</h2>
+        <!-- HASIL KARYA WEB -->
+        <h2>Portofolio Web</h2>
         <div class="grid-2">
             <div class="card">
                 <h3>Good News From Indonesia</h3>
-                <span class="tag tag-highlight">Web Content</span> <span class="tag">SEO</span>
-                <p>Menulis artikel organik dengan riset mendalam agar konten terus relevan dan dibaca dalam jangka panjang.</p>
-                <p><a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank">Kunjungi Author Page &rarr;</a></p>
+                <div>
+                    <span class="tag tag-yellow">Sosbud & Wisata</span> 
+                    <span class="tag">Evergreen</span>
+                </div>
+                <p>Meracik artikel <em>evergreen</em> seputar sosial budaya, sejarah, dan pariwisata yang awet dibaca dalam jangka panjang.</p>
+                <p style="margin-bottom:0;"><a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank">Kunjungi Author Page &rarr;</a></p>
             </div>
             
             <div class="card">
                 <h3>Sekawan Media</h3>
-                <span class="tag tag-highlight">Article</span> <span class="tag">Tech & Biz</span>
-                <p>Memproduksi artikel informatif dengan struktur SEO yang rapi, terarah, dan mudah dipahami pembaca.</p>
-                <p><a href="https://sitespirit.co/author/safira_content_intern26/" target="_blank">Lihat Artikel &rarr;</a></p>
+                <div>
+                    <span class="tag tag-green">B2B Tech</span> 
+                    <span class="tag tag-yellow">Software & App</span>
+                </div>
+                <p>Membahas topik teknis seputar <em>website</em> dan <em>software</em> menjadi artikel edukatif yang mudah dipahami pembaca.</p>
+                <p style="margin-bottom:0;"><a href="https://www.sekawanmedia.co.id/" target="_blank">Kunjungi Website &rarr;</a></p>
             </div>
 
             <div class="card" style="grid-column: 1 / -1;">
                 <h3>SiteSpirit</h3>
-                <span class="tag tag-highlight">Content Writing</span>
-                <p>Menyusun berbagai rubrik artikel informatif dengan riset topik yang akurat selama masa penugasan konten.</p>
-                <p><a href="https://sitespirit.co/author/safira_content_intern26/" target="_blank">Kunjungi Halaman Penulis &rarr;</a></p>
+                <div>
+                    <span class="tag tag-pink">Tech & Website</span> 
+                    <span class="tag">SEO Content</span>
+                </div>
+                <p>Menyusun rubrik artikel informatif terkait industri teknologi, pengembangan <em>website</em>, dan perangkat lunak.</p>
+                <p style="margin-bottom:0;"><a href="https://sitespirit.co/" target="_blank">Kunjungi Website &rarr;</a></p>
             </div>
         </div>
 
-        <!-- KARYA MEDIA SOSIAL (TANPA GAMBAR/VISUAL BOX) -->
-        <h2>📱 Karya Media Sosial (CampusNet)</h2>
+        <!-- KARYA MEDIA SOSIAL -->
+        <h2>Karya Media Sosial (CampusNet)</h2>
         <p>Cuplikan dari hasil penyusunan <em>content plan</em> dan <em>copywriting</em> interaktif:</p>
         <div class="grid-2">
             <div class="card">
                 <h3>Carousel & Copywriting</h3>
-                <span class="tag tag-green">Social Media</span>
-                <p>Membuat 35+ konten edukatif interaktif dengan narasi yang dirancang khusus untuk memikat interaksi audiens.</p>
+                <div><span class="tag tag-green">Social Media</span></div>
+                <p style="margin-bottom:0;">Membuat 35+ konten edukasi yang membahas <em>tips & trick</em> belajar, info beasiswa, hingga rekomendasi <em>tools</em> penunjang pelajar.</p>
             </div>
             <div class="card">
                 <h3>Content Brief & Plan</h3>
-                <span class="tag tag-green">Strategy</span>
-                <p>Penyusunan jadwal publikasi, struktur <em>briefing</em> konten, dan riset topik mingguan yang terarah.</p>
+                <div><span class="tag tag-yellow">Strategy</span></div>
+                <p style="margin-bottom:0;">Penyusunan jadwal publikasi, struktur <em>briefing</em> konten, dan riset topik mingguan yang terarah.</p>
             </div>
         </div>
 
         <!-- PENDIDIKAN & SERTIFIKASI -->
-        <h2>🎓 Pendidikan & Sertifikasi</h2>
-        <ul style="padding-left: 20px; font-weight: 500;">
-            <li style="margin-bottom: 10px;"><strong>S1 Sosiologi</strong> — Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens.</li>
-            <li style="margin-bottom: 10px;"><strong>GNFI Writing Camp Batch 1</strong> — Pelatihan intensif penulisan dan jurnalistik warga.</li>
-            <li><strong>GNFI x Future Skills</strong> — Program pengembangan kompetensi digital dan penulisan strategis.</li>
+        <h2>Pendidikan & Sertifikasi</h2>
+        <ul style="padding-left: 20px; font-weight: 400; color: var(--text-muted);">
+            <li style="margin-bottom: 10px;"><strong style="color: var(--text-main);">S1 Sosiologi</strong> — Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: var(--text-main);">GNFI Writing Camp Batch 1</strong> — Pelatihan intensif penulisan dan jurnalistik warga.</li>
+            <li><strong style="color: var(--text-main);">GNFI x Future Skills</strong> — Program pengembangan kompetensi digital dan penulisan strategis.</li>
         </ul>
 
         <!-- KEAHLIAN & TOOLS -->
-        <h2>🛠️ Keahlian & Tools</h2>
+        <h2>Keahlian & Tools</h2>
         <div style="margin-bottom: 15px;">
-            <span class="tag tag-highlight">SEO Content Writing</span>
-            <span class="tag tag-highlight">Keyword Research</span>
-            <span class="tag">Content Planning</span>
+            <span class="tag tag-yellow">SEO Content Writing</span>
+            <span class="tag tag-yellow">Keyword Research</span>
+            <span class="tag tag-pink">Content Marketing</span>
             <span class="tag">Copywriting</span>
+            <span class="tag tag-green">Proofreading & Editing</span>
+            <span class="tag tag-yellow">Content Planning</span>
+            <span class="tag tag-pink">On-Page SEO</span>
+            <span class="tag">Social Media Strategy</span>
+            <span class="tag tag-green">CMS Management</span>
+            <span class="tag tag-pink">Trend Analysis</span>
         </div>
-        <p style="margin-bottom: 10px; font-weight: 700;">Perangkat Kerja Utama:</p>
+        <p style="margin-bottom: 10px; font-weight: 600; color: var(--text-main);">Perangkat Kerja Utama:</p>
         <div>
             <span class="tag tag-green">Google Search Console</span>
             <span class="tag tag-green">Google Trends</span>
@@ -343,11 +349,10 @@
 
         <!-- CALL TO ACTION -->
         <div class="cta-container">
-            <h2 style="margin-top: 0; border: none; font-size: 2rem;">Tertarik Kerja Bareng?</h2>
-            <p style="font-size: 1.1rem; font-weight: 600;">Mari ngobrol tentang bagaimana konten organik bisa membantu websitemu.</p>
-            <br>
+            <h2 style="margin-top: 0; border: none; font-size: 1.5rem; color: var(--text-main);">Tertarik Kerja Bareng?</h2>
+            <p style="font-size: 1.05rem; max-width: 600px; margin: 0 auto 1.5rem auto; color: var(--text-main);">Saat ini aku terbuka untuk peluang kerja <em>full-time</em>. Mari ngobrol tentang bagaimana aku bisa berkontribusi di perusahaanmu lewat konten organik!</p>
             <a href="mailto:safirahana.r@gmail.com" class="cta-btn">Kirim Email</a>
-            <a href="https://www.linkedin.com/" class="cta-btn" target="_blank" style="background: #0077b5; border-color: #0077b5;">LinkedIn Profile</a>
+            <a href="https://www.linkedin.com/" class="cta-btn" target="_blank" style="background: #0284c7; color: #fff;">LinkedIn Profile</a>
         </div>
 
     </div>
