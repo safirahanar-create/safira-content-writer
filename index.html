@@ -8,19 +8,20 @@
     
     <style>
         /* =========================================================
-           ✨ PALET WARNA SANTORINI: SUNFLOWER YELLOW, AEGEAN BLUE, OLIVE GREEN, SANTORINI WHITE
+           ✨ PALET WARNA: PASTEL SUNSET + BACKGROUND AKSARA KLASIK JELAS TERBACA
            ========================================================= */
         :root {
-            --bg-body: #F7F5F0;           /* Santorini White lembut */
+            --bg-body: #FDFBF7;           
             --bg-card: #ffffff;
-            --text-main: #0077C8;         /* Aegean Blue */
-            --text-muted: #4B5563;
-            --border-subtle: #F2C400;     /* Sunflower Yellow */
+            --text-main: #852736;         /* Antique Ruby */
+            --text-muted: #4b5563;
+            --border-subtle: #E2C99E;     /* Warm Cream */
             
-            --sunflower-yellow: #F2C400;
-            --aegean-blue: #0077C8;
-            --olive-green: #486B1F;
-            --santorini-white: #F7F4EC;
+            --chinese-blue: #414B9E;
+            --ceil: #9792CB;              
+            --pearly-purple: #AA74A0;
+            --desert-sand: #E2C99E;
+            --antique-ruby: #852736;
         }
 
         * {
@@ -38,25 +39,27 @@
             overflow-x: hidden;
         }
 
-        /* 🔠 BACKGROUND: KUMPULAN AKSARA LINTAS NEGARA DENGAN WARNA PALET SANTORINI */
+        /* 📜 BACKGROUND: AKSARA KLASIK & LATIN ESTETIK */
         body::before {
-            content: "INDONESIA • 🇯🇵 NIHON • 🇰🇷 HANGUK • 🇺🇸 AMERICA • 🇫🇷 FRANCE • 🇪🇸 ESPAÑA • 🇩🇪 DEUTSCHLAND • 🇮🇹 ITALIA • 🇬🇧 UNITED KINGDOM • 🇨🇳 ZHONGGUO • 🇯🇵 TOKYO • 🇰🇷 SEOUL • 🇫🇷 PARIS • 🇺🇸 NEW YORK • 🇪🇸 MADRID • 🇮🇹 ROMA • 🇩🇪 BERLIN • 🇬🇧 LONDON • 🇨🇳 BEIJING • INDONESIA • NIHON • HANGUK • AMERICA • FRANCE • ESPAÑA • DEUTSCHLAND • ITALIA • UNITED KINGDOM • ZHONGGUO •";
+            content: "• MANUSCRIPT • SCRIPTURA • ARCHETYPES • LITTERA • HISTORIA • CODEX • BIBLIOTHECA • SCRIBERE • TYPOGRAPHIA • MANUSCRIPT • SCRIPTURA • ARCHETYPES • LITTERA • HISTORIA • CODEX • BIBLIOTHECA • SCRIBERE • TYPOGRAPHIA • CLASSICA • LINGUA • GRAMMATICA • PARAGRAPHUS • EDITIO • VOLUMEN • MANUSCRIPT • SCRIPTURA • ARCHETYPES • LITTERA • HISTORIA • CODEX • BIBLIOTHECA • SCRIBERE • TYPOGRAPHIA •";
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            font-size: 0.9rem;
-            font-weight: 700;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            font-size: 1rem;
+            font-weight: 800;
             line-height: 2.8;
-            color: var(--aegean-blue);
-            opacity: 0.15; /* Jelas dan terlihat samar */
+            letter-spacing: 4px;
+            color: var(--antique-ruby);
+            opacity: 0.14; 
             z-index: -1;
             white-space: normal;
             word-break: break-all;
-            padding: 20px;
+            padding: 40px;
             pointer-events: none;
             user-select: none;
+            transform: rotate(-10deg);
         }
 
         .portfolio-container {
@@ -64,20 +67,78 @@
             margin: 60px auto;
             background: var(--bg-card);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 119, 200, 0.1);
+            box-shadow: 0 15px 35px rgba(133, 39, 54, 0.1);
             overflow: hidden;
-            border: 2px solid var(--aegean-blue);
+            border: 2px solid var(--antique-ruby);
             position: relative;
             z-index: 1;
         }
 
+        /* LIVE STATUS BADGE (OPEN TO WORK) */
+        .live-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(226, 201, 158, 0.3);
+            border: 1px solid var(--desert-sand);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--antique-ruby);
+            margin-bottom: 12px;
+        }
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10B981;
+            border-radius: 50%;
+            box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        /* TOMBOL TRANSLATE DI POJOK KANAN ATAS HEADER */
+        .lang-switch-container {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            display: flex;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid var(--desert-sand);
+            border-radius: 30px;
+            overflow: hidden;
+            padding: 3px;
+            z-index: 10;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            padding: 6px 14px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: var(--desert-sand);
+            color: var(--antique-ruby);
+        }
+
         /* HEADER */
         .portfolio-header {
-            background: var(--aegean-blue);
+            background: var(--antique-ruby);
             color: #ffffff;
             padding: 4rem 3rem 2.5rem 3rem;
-            border-bottom: 2px solid var(--sunflower-yellow);
+            border-bottom: 2px solid var(--desert-sand);
             text-align: center;
+            position: relative;
         }
         
         .portfolio-top-tag {
@@ -85,7 +146,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 700;
-            color: var(--sunflower-yellow);
+            color: var(--desert-sand);
             margin-bottom: 10px;
         }
 
@@ -98,7 +159,7 @@
         }
         .portfolio-meta {
             font-size: 0.95rem;
-            color: var(--sunflower-yellow);
+            color: var(--desert-sand);
             font-weight: 600;
             margin-bottom: 1.5rem;
             display: inline-block;
@@ -111,10 +172,38 @@
             max-width: 600px;
             line-height: 1.6;
             padding: 16px 20px;
-            border-left: 4px solid var(--sunflower-yellow);
-            background: rgba(242, 196, 0, 0.2);
+            border-left: 4px solid var(--desert-sand);
+            background: rgba(151, 146, 203, 0.25);
             border-radius: 0 10px 10px 0;
             text-align: left;
+        }
+
+        /* QUICK STATS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .stat-card {
+            background: rgba(226, 201, 158, 0.2);
+            border: 1px solid var(--desert-sand);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--desert-sand);
+            text-transform: uppercase;
         }
 
         .portfolio-content {
@@ -122,7 +211,7 @@
         }
 
         h2 {
-            color: var(--aegean-blue);
+            color: var(--antique-ruby);
             font-size: 1.25rem;
             font-weight: 800;
             letter-spacing: 0.5px;
@@ -132,7 +221,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            border-bottom: 2px solid var(--sunflower-yellow);
+            border-bottom: 2px solid var(--desert-sand);
             padding-bottom: 8px;
         }
         h2:first-of-type { margin-top: 0; }
@@ -148,27 +237,27 @@
 
         /* CARD */
         .card {
-            border: 1px solid var(--sunflower-yellow);
+            border: 1px solid var(--border-subtle);
             padding: 1.8rem;
             border-radius: 14px;
             background: var(--bg-card);
             transition: all 0.2s ease;
         }
         .card:hover {
-            border-color: var(--olive-green);
-            box-shadow: 0 6px 20px rgba(72, 107, 31, 0.15);
+            border-color: var(--pearly-purple);
+            box-shadow: 0 6px 20px rgba(170, 116, 160, 0.15);
         }
         .card h3 {
             margin-top: 0;
-            color: var(--aegean-blue);
+            color: var(--antique-ruby);
             font-size: 1.15rem;
             font-weight: 700;
         }
 
         /* SEO Box */
         .seo-link-box {
-            background: rgba(242, 196, 0, 0.1);
-            border: 1px solid var(--sunflower-yellow);
+            background: rgba(226, 201, 158, 0.15);
+            border: 1px solid var(--desert-sand);
             border-radius: 14px;
             padding: 1.8rem;
             margin-top: 1.5rem;
@@ -184,8 +273,8 @@
             gap: 12px;
         }
         .traits-list li {
-            background: rgba(72, 107, 31, 0.08);
-            border: 1px solid var(--sunflower-yellow);
+            background: rgba(170, 116, 160, 0.08);
+            border: 1px solid var(--border-subtle);
             padding: 12px 18px;
             border-radius: 10px;
             font-size: 0.95rem;
@@ -194,13 +283,13 @@
         }
         .traits-list li:nth-child(5) {
             grid-column: 1 / -1;
-            background: rgba(242, 196, 0, 0.2);
+            background: rgba(226, 201, 158, 0.3);
         }
 
         /* TAGS */
         .tag {
-            background: rgba(0, 119, 200, 0.1);
-            color: var(--aegean-blue);
+            background: rgba(151, 146, 203, 0.15);
+            color: var(--chinese-blue);
             padding: 5px 12px;
             border-radius: 6px;
             font-size: 0.8rem;
@@ -208,29 +297,29 @@
             display: inline-block;
             margin-bottom: 8px;
             margin-right: 6px;
-            border: 1px solid var(--sunflower-yellow);
+            border: 1px solid var(--border-subtle);
         }
         .tag-highlight {
-            background: rgba(72, 107, 31, 0.15);
-            color: var(--olive-green);
-            border-color: var(--olive-green);
+            background: rgba(170, 116, 160, 0.2);
+            color: var(--antique-ruby);
+            border-color: var(--pearly-purple);
         }
 
-        a { color: var(--aegean-blue); text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; color: var(--sunflower-yellow); }
+        a { color: var(--chinese-blue); text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; color: var(--antique-ruby); }
 
         /* CTA SECTION */
         .cta-container {
             margin-top: 4rem;
             padding: 3rem 2rem;
-            background: rgba(242, 196, 0, 0.15);
+            background: rgba(226, 201, 158, 0.25);
             border-radius: 16px;
             text-align: center;
-            border: 2px solid var(--aegean-blue);
+            border: 2px solid var(--antique-ruby);
         }
         .cta-btn {
             display: inline-block;
-            background: var(--aegean-blue);
+            background: var(--antique-ruby);
             color: #ffffff;
             padding: 12px 30px;
             border-radius: 10px;
@@ -241,15 +330,15 @@
             text-decoration: none;
         }
         .cta-btn:hover {
-            background: var(--olive-green);
+            background: var(--chinese-blue);
             color: #ffffff;
             text-decoration: none;
         }
         .cta-btn.linkedin {
-            background: var(--olive-green);
+            background: var(--chinese-blue);
         }
         .cta-btn.linkedin:hover {
-            background: var(--aegean-blue);
+            background: var(--antique-ruby);
         }
 
         footer {
@@ -258,15 +347,16 @@
             font-weight: 500;
             font-size: 0.85rem;
             color: var(--text-muted);
-            border-top: 1px solid var(--sunflower-yellow);
+            border-top: 1px solid var(--border-subtle);
             background: var(--bg-card);
         }
 
         @media (max-width: 768px) {
-            .grid-2, .traits-list { grid-template-columns: 1fr; }
+            .grid-2, .traits-list, .stats-grid { grid-template-columns: 1fr; }
             .portfolio-container { margin: 15px; border-radius: 12px; }
             .portfolio-content { padding: 1.5rem; }
-            .portfolio-header { padding: 2.5rem 1.5rem 1.5rem 1.5rem; }
+            .portfolio-header { padding: 3.5rem 1.5rem 1.5rem 1.5rem; }
+            .lang-switch-container { top: 15px; right: 15px; }
         }
     </style>
 </head>
@@ -274,36 +364,64 @@
 
 <div class="portfolio-container">
     
+    <!-- TOMBOL GANTI BAHASA (ID / EN) -->
+    <div class="lang-switch-container">
+        <button class="lang-btn active" id="btn-id" onclick="setLanguage('id')">ID</button>
+        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+    </div>
+
     <!-- HEADER -->
     <div class="portfolio-header">
-        <div class="portfolio-top-tag">WELCOME TO MY PORTFOLIO</div>
+        <div class="live-status">
+            <span class="pulse-dot"></span>
+            <span data-id="Open for Full-Time Opportunities" data-en="Open for Full-Time Opportunities">Open for Full-Time Opportunities</span>
+        </div>
+        <div class="portfolio-top-tag" data-id="WELCOME TO MY PORTFOLIO" data-en="WELCOME TO MY PORTFOLIO">WELCOME TO MY PORTFOLIO</div>
         <h1>Safira Hana R.</h1>
-        <div class="portfolio-meta">Semarang, ID &bull; SEO Content Writer</div>
-        <p class="catchy-bio">
+        <div class="portfolio-meta" data-id="Semarang, ID &bull; SEO Content Writer" data-en="Semarang, ID &bull; SEO Content Writer">Semarang, ID &bull; SEO Content Writer</div>
+        <p class="catchy-bio" data-id="&quot;Nggak obral janji pasti rank satu, tapi siap meracik tulisan yang relevan, awet dibaca, dan pastinya ramah SEO.&quot;" data-en="&quot;No empty promises of instant rank one, but ready to craft relevant, evergreen, and SEO-friendly content.&quot;">
             "Nggak obral janji pasti rank satu, tapi siap meracik tulisan yang relevan, awet dibaca, dan pastinya ramah SEO."
         </p>
+
+        <!-- QUICK STATS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">3+</div>
+                <div class="stat-label" data-id="Rank 1 Google" data-en="Google Rank #1">Rank 1 Google</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1+</div>
+                <div class="stat-label" data-id="Tahun Pengalaman" data-en="Years Experience">Tahun Pengalaman</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">35+</div>
+                <div class="stat-label" data-id="Konten Sosmed" data-en="Social Media Posts">Konten Sosmed</div>
+            </div>
+        </div>
     </div>
 
     <div class="portfolio-content">
 
         <!-- TENTANG AKU -->
-        <h2>Tentang Aku</h2>
-        <p>Halo, aku Safira. Sebagai penulis artikel, aku paling suka meracik konten <em>evergreen</em>. Tujuannya simpel aja, supaya artikel yang kutulis bisa terus bermanfaat dan relevan dalam jangka waktu yang lama. Meski begitu, aku tetap terbuka kalau harus nulis konten yang lagi tren.</p>
+        <h2 data-id="Tentang Aku" data-en="About Me">Tentang Aku</h2>
+        <p data-id="Halo, aku Safira. Sebagai penulis artikel, aku paling suka meracik konten <em>evergreen</em>. Tujuannya simpel aja, supaya artikel yang kutulis bisa terus bermanfaat dan relevan dalam jangka waktu yang lama. Meski begitu, aku tetap terbuka kalau harus nulis konten yang lagi tren." data-en="Hello, I am Safira. As an article writer, I love crafting <em>evergreen</em> content. The goal is simple: to make sure my articles remain useful and relevant for a long time. However, I am also open to writing trending topics when needed.">
+            Halo, aku Safira. Sebagai penulis artikel, aku paling suka meracik konten <em>evergreen</em>. Tujuannya simpel aja, supaya artikel yang kutulis bisa terus bermanfaat dan relevan dalam jangka waktu yang lama. Meski begitu, aku tetap terbuka kalau harus nulis konten yang lagi tren.
+        </p>
 
         <!-- PRINSIP KERJA -->
-        <h2>Prinsip Kerja</h2>
+        <h2 data-id="Prinsip Kerja" data-en="Work Ethics">Prinsip Kerja</h2>
         <ul class="traits-list">
-            <li>🌱 Suka ngulik hal baru</li>
-            <li>💬 Terbuka dengan kritik membangun</li>
-            <li>🤝 Gampang adaptasi & kerja bareng</li>
-            <li>🔍 Rajin riset dan cek fakta</li>
-            <li>⏱️ Komit selesaikan tugas</li>
+            <li data-id="🌱 Suka ngulik hal baru" data-en="🌱 Passionate about learning">🌱 Suka ngulik hal baru</li>
+            <li data-id="💬 Terbuka dengan kritik membangun" data-en="💬 Open to constructive feedback">💬 Terbuka dengan kritik membangun</li>
+            <li data-id="🤝 Gampang adaptasi & kerja bareng" data-en="🤝 Adaptable & collaborative">🤝 Gampang adaptasi & kerja bareng</li>
+            <li data-id="🔍 Rajin riset dan cek fakta" data-en="🔍 Thorough research & fact-checking">🔍 Rajin riset dan cek fakta</li>
+            <li data-id="⏱️ Komit selesaikan tugas" data-en="⏱️ Committed to deadlines">⏱️ Komit selesaikan tugas</li>
         </ul>
 
         <!-- PENCAPAIAN SEO -->
-        <h2>Pencapaian SEO</h2>
+        <h2 data-id="Pencapaian SEO" data-en="SEO Achievements">Pencapaian SEO</h2>
         <div class="seo-link-box">
-            <p style="margin-bottom: 12px; font-size: 1rem; color: var(--aegean-blue);">Beberapa artikel organik yang berhasil menembus <strong>Peringkat 1 di pencarian Google</strong>:</p>
+            <p style="margin-bottom: 12px; font-size: 1rem; color: var(--antique-ruby);" data-id="Beberapa artikel organik yang berhasil menembus <strong>Peringkat 1 di pencarian Google</strong>:" data-en="Organic articles that successfully hit <strong>Google Rank #1</strong>:">Beberapa artikel organik yang berhasil menembus <strong>Peringkat 1 di pencarian Google</strong>:</p>
             <ul style="margin: 0; padding-left: 20px; font-weight: 500; line-height: 1.8; color: var(--text-muted);">
                 <li><a href="https://www.goodnewsfromindonesia.id/2024/06/11/8-jenis-serabi-dengan-rasanya-yang-khas-dari-berbagai-daerah-di-indonesia" target="_blank">"jenis serabi"</a> — Good News From Indonesia</li>
                 <li><a href="https://www.sekawanmedia.co.id/blog/tanda-website-kena-hack/" target="_blank">"website kena hack"</a> — Sekawan Media</li>
@@ -312,26 +430,26 @@
         </div>
 
         <!-- HASIL KARYA WEB -->
-        <h2>Portofolio Web</h2>
+        <h2 data-id="Portofolio Web" data-en="Web Portfolio">Portofolio Web</h2>
         <div class="grid-2">
             <div class="card">
                 <h3>Good News From Indonesia</h3>
                 <div>
-                    <span class="tag tag-highlight">Sosbud & Wisata</span> 
+                    <span class="tag tag-highlight" data-id="Sosbud & Wisata" data-en="Culture & Tourism">Sosbud & Wisata</span> 
                     <span class="tag">Evergreen</span>
                 </div>
-                <p>Meracik artikel <em>evergreen</em> seputar sosial budaya, sejarah, dan pariwisata yang awet dibaca dalam jangka panjang.</p>
-                <p style="margin-bottom:0;"><a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank">Kunjungi Author Page &rarr;</a></p>
+                <p data-id="Meracik artikel <em>evergreen</em> seputar sosial budaya, sejarah, dan pariwisata yang awet dibaca dalam jangka panjang." data-en="Crafting long-lasting <em>evergreen</em> articles regarding social culture, history, and tourism.">Meracik artikel <em>evergreen</em> seputar sosial budaya, sejarah, dan pariwisata yang awet dibaca dalam jangka panjang.</p>
+                <p style="margin-bottom:0;"><a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank" data-id="Kunjungi Author Page &rarr;" data-en="Visit Author Page &rarr;">Kunjungi Author Page &rarr;</a></p>
             </div>
             
             <div class="card">
                 <h3>Sekawan Media</h3>
                 <div>
                     <span class="tag tag-highlight">B2B Tech</span> 
-                    <span class="tag">Software & App</span>
+                    <span class="tag" data-id="Software & App" data-en="Software & App">Software & App</span>
                 </div>
-                <p>Membahas topik teknis seputar <em>website</em> dan <em>software</em> menjadi artikel edukatif yang mudah dipahami pembaca.</p>
-                <p style="margin-bottom:0;"><a href="https://www.sekawanmedia.co.id/" target="_blank">Kunjungi Website &rarr;</a></p>
+                <p data-id="Membahas topik teknis seputar <em>website</em> dan <em>software</em> menjadi artikel edukatif yang mudah dipahami pembaca." data-en="Translating technical topics on <em>websites</em> and <em>software</em> into educational, reader-friendly articles.">Membahas topik teknis seputar <em>website</em> dan <em>software</em> menjadi artikel edukatif yang mudah dipahami pembaca.</p>
+                <p style="margin-bottom:0;"><a href="https://www.sekawanmedia.co.id/author/safira_content_intern_skwn2026/" target="_blank" data-id="Kunjungi Author Page &rarr;" data-en="Visit Author Page &rarr;">Kunjungi Author Page &rarr;</a></p>
             </div>
 
             <div class="card" style="grid-column: 1 / -1;">
@@ -340,33 +458,33 @@
                     <span class="tag tag-highlight">Tech & Website</span> 
                     <span class="tag">SEO Content</span>
                 </div>
-                <p>Menyusun rubrik artikel informatif terkait industri teknologi, pengembangan <em>website</em>, dan perangkat lunak.</p>
-                <p style="margin-bottom:0;"><a href="https://sitespirit.co/" target="_blank">Kunjungi Website &rarr;</a></p>
+                <p data-id="Menyusun rubrik artikel informatif terkait industri teknologi, pengembangan <em>website</em>, dan perangkat lunak." data-en="Developing informative rubrics regarding the tech industry, <em>website</em> development, and software.">Menyusun rubrik artikel informatif terkait industri teknologi, pengembangan <em>website</em>, dan perangkat lunak.</p>
+                <p style="margin-bottom:0;"><a href="https://sitespirit.co/author/safira_content_intern26/" target="_blank" data-id="Kunjungi Author Page &rarr;" data-en="Visit Author Page &rarr;">Kunjungi Author Page &rarr;</a></p>
             </div>
         </div>
 
         <!-- KARYA MEDIA SOSIAL -->
-        <h2>Karya Media Sosial (CampusNet)</h2>
-        <p>Cuplikan dari hasil penyusunan konten edukatif dan *copywriting* interaktif:</p>
+        <h2 data-id="Karya Media Sosial (CampusNet)" data-en="Social Media Work (CampusNet)">Karya Media Sosial (CampusNet)</h2>
+        <p data-id="Cuplikan dari hasil penyusunan konten edukatif dan *copywriting* interaktif:" data-en="Snippets of educational content curation and interactive *copywriting*:">Cuplikan dari hasil penyusunan konten edukatif dan *copywriting* interaktif:</p>
         <div class="grid-2" style="grid-template-columns: 1fr;">
             <div class="card">
-                <h3>Carousel & Copywriting</h3>
-                <div><span class="tag tag-highlight">Social Media</span></div>
-                <p style="margin-bottom:0;">Membuat 35+ konten edukasi yang membahas <em>tips & trick</em> belajar, info beasiswa, hingga rekomendasi <em>tools</em> penunjang pelajar.</p>
+                <h3 data-id="Carousel & Copywriting" data-en="Carousel & Copywriting">Carousel & Copywriting</h3>
+                <div><span class="tag tag-highlight" data-id="Media Sosial" data-en="Social Media">Social Media</span></div>
+                <p style="margin-bottom:0;" data-id="Membuat 35+ konten edukasi yang membahas <em>tips & trick</em> belajar, info beasiswa, hingga rekomendasi <em>tools</em> penunjang pelajar." data-en="Created 35+ educational posts discussing study tips & tricks, scholarship info, and student productivity tools.">Membuat 35+ konten edukasi yang membahas <em>tips & trick</em> belajar, info beasiswa, hingga rekomendasi <em>tools</em> penunjang pelajar.</p>
             </div>
         </div>
 
         <!-- PENDIDIKAN & SERTIFIKASI -->
-        <h2>Pendidikan & Sertifikasi</h2>
+        <h2 data-id="Pendidikan & Sertifikasi" data-en="Education & Certifications">Pendidikan & Sertifikasi</h2>
         <ul style="padding-left: 20px; font-weight: 400; color: var(--text-muted);">
-            <li style="margin-bottom: 10px;"><strong style="color: var(--aegean-blue);">S1 Sosiologi</strong> — Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens.</li>
-            <li style="margin-bottom: 10px;"><strong style="color: var(--aegean-blue);">GNFI Writing Camp Batch 1</strong> — Pelatihan intensif penulisan artikel SEO dan jurnalistik dasar.</li>
-            <li style="margin-bottom: 10px;"><strong style="color: var(--aegean-blue);">GNFI x Future Skills</strong> — Program pengembangan kompetensi digital, penulisan strategis, dan penulisan artikel sesuai kaidah PUEBI.</li>
-            <li><strong style="color: var(--aegean-blue);">Wikilatih Daring</strong> — Menulis artikel berbasis ensiklopedis dengan menerapkan kaidah bahasa Indonesia baku, PUEBI, dan EYD.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: var(--antique-ruby);" data-id="S1 Sosiologi" data-en="Bachelor in Sociology">S1 Sosiologi</strong> — <span data-id="Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens." data-en="Studying social trends analysis, societal structure, and audience behavior.">Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens.</span></li>
+            <li style="margin-bottom: 10px;"><strong style="color: var(--antique-ruby);">GNFI Writing Camp Batch 1</strong> — <span data-id="Pelatihan intensif penulisan artikel SEO dan jurnalistik dasar." data-en="Intensive training in SEO article writing and basic journalism.">Pelatihan intensif penulisan artikel SEO dan jurnalistik dasar.</span></li>
+            <li style="margin-bottom: 10px;"><strong style="color: var(--antique-ruby);">GNFI x Future Skills</strong> — <span data-id="Program pengembangan kompetensi digital, penulisan strategis, dan penulisan artikel sesuai kaidah PUEBI." data-en="Digital competency development program, strategic writing, and articles aligned with Indonesian language standards.">Program pengembangan kompetensi digital, penulisan strategis, dan penulisan artikel sesuai kaidah PUEBI.</span></li>
+            <li><strong style="color: var(--antique-ruby);">Wikilatih Daring</strong> — <span data-id="Menulis artikel berbasis ensiklopedis dengan menerapkan kaidah bahasa Indonesia baku, PUEBI, dan EYD." data-en="Writing encyclopedia-based articles adhering to standard Indonesian language rules.">Menulis artikel berbasis ensiklopedis dengan menerapkan kaidah bahasa Indonesia baku, PUEBI, dan EYD.</span></li>
         </ul>
 
         <!-- KEAHLIAN & TOOLS -->
-        <h2>Keahlian & Tools</h2>
+        <h2 data-id="Keahlian & Tools" data-en="Skills & Tools">Keahlian & Tools</h2>
         <div style="margin-bottom: 15px;">
             <span class="tag tag-highlight">SEO Content Writing</span>
             <span class="tag tag-highlight">Keyword Research</span>
@@ -375,11 +493,11 @@
             <span class="tag">Proofreading & Editing</span>
             <span class="tag">Content Planning</span>
             <span class="tag">On-Page SEO</span>
-            <span class="tag">Social Media Strategy</span>
+            <span class="tag" data-id="Strategi Media Sosial" data-en="Social Media Strategy">Social Media Strategy</span>
             <span class="tag">CMS Management</span>
-            <span class="tag">Trend Analysis</span>
+            <span class="tag" data-id="Analisis Tren" data-en="Trend Analysis">Trend Analysis</span>
         </div>
-        <p style="margin-bottom: 10px; font-weight: 600; color: var(--aegean-blue);">Perangkat Kerja Utama:</p>
+        <p style="margin-bottom: 10px; font-weight: 600; color: var(--antique-ruby);" data-id="Perangkat Kerja Utama:" data-en="Primary Tools:">Perangkat Kerja Utama:</p>
         <div>
             <span class="tag">Google Search Console</span>
             <span class="tag">Google Trends</span>
@@ -391,20 +509,39 @@
 
         <!-- CALL TO ACTION & TERIMA KASIH DI PALING BAWAH -->
         <div class="cta-container">
-            <h2 style="margin-top: 0; border: none; font-size: 1.4rem; color: var(--aegean-blue); justify-content: center;">Tertarik Bekerja Sama?</h2>
-            <p style="font-size: 1.05rem; max-width: 550px; margin: 0 auto 1.5rem auto; color: var(--text-muted);">Saat ini saya terbuka untuk kesempatan full-time di bidang writing dan SEO. Silakan hubungi saya untuk memulai diskusi.</p>
-            <a href="mailto:safirahana.r@gmail.com" class="cta-btn">Kirim Email</a>
+            <h2 style="margin-top: 0; border: none; font-size: 1.4rem; color: var(--antique-ruby); justify-content: center;" data-id="Tertarik Bekerja Sama?" data-en="Interested in Collaborating?">Tertarik Bekerja Sama?</h2>
+            <p style="font-size: 1.05rem; max-width: 550px; margin: 0 auto 1.5rem auto; color: var(--text-muted);" data-id="Saat ini saya terbuka untuk kesempatan full-time di bidang writing dan SEO. Silakan hubungi saya untuk memulai diskusi." data-en="I am currently open to full-time opportunities in writing and SEO. Feel free to reach out to start a conversation.">Saat ini saya terbuka untuk kesempatan full-time di bidang writing dan SEO. Silakan hubungi saya untuk memulai diskusi.</p>
+            <a href="mailto:safirahana.r@gmail.com" class="cta-btn" data-id="Kirim Email" data-en="Send Email">Kirim Email</a>
             <a href="https://www.linkedin.com/" class="cta-btn linkedin" target="_blank">LinkedIn Profile</a>
-            <div style="margin-top: 2rem; font-weight: 700; color: var(--aegean-blue); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">Terima kasih</div>
+            <div style="margin-top: 2rem; font-weight: 700; color: var(--antique-ruby); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;" data-id="Terima kasih" data-en="Thank you">Terima kasih</div>
         </div>
 
     </div>
 
     <footer>
-        &copy; 2026 Safira Hana R. &bull; Diperbarui secara berkala
+        &copy; 2026 Safira Hana R. &bull; <span data-id="Diperbarui secara berkala" data-en="Regularly updated">Diperbarui secara berkala</span>
     </footer>
 
 </div>
+
+<!-- SKRIP JAVASCRIPT UNTUK FITUR TOMBOL INTERAKTIF BAHASA (ID / EN) -->
+<script>
+    function setLanguage(lang) {
+        // Toggle tombol aktif
+        document.getElementById('btn-id').classList.toggle('active', lang === 'id');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+        // Ganti semua teks elemen yang punya atribut data-id / data-en
+        const elements = document.querySelectorAll('[data-id]');
+        elements.forEach(el => {
+            if (lang === 'en') {
+                el.innerHTML = el.getAttribute('data-en');
+            } else {
+                el.innerHTML = el.getAttribute('data-id');
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
