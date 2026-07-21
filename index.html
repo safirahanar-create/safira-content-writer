@@ -8,309 +8,318 @@
     
     <style>
         /* =========================================================
-           🌸 UI/UX WIKI THEME: SPRING BLOSSOM 🌸
+           ⚡ UI/UX THEME: TRENDY EDGY (NEO-BRUTALISM) ⚡
            ========================================================= */
         :root {
-            --bg-color: #fffafb;          
-            --primary-color: #831843;     
-            --accent-color: #db2777;      
-            --accent-hover: #be185d;      
-            --soft-blossom: #fce7f3;      
-            --peach-card: #fff1f2;        
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --border-color: #fbcfe8;      
+            --bg-color: #fcfcf9;          /* Off-white background */
+            --text-main: #111111;         /* Solid black text */
+            --border-color: #111111;      /* Hard black borders */
+            --green-accent: #00e572;      /* Vibrant green */
+            --yellow-accent: #ffde59;     /* Vibrant yellow */
+            --orange-accent: #ff6a13;     /* Punchy orange */
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
             padding: 0;
-            line-height: 1.7;
+            line-height: 1.6;
+            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+            background-size: 20px 20px;
         }
 
-        .wiki-container {
+        .portfolio-container {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 50px auto;
             background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(219, 39, 119, 0.05);
+            border: 3px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 8px 8px 0px var(--border-color);
             overflow: hidden;
         }
 
-        .wiki-header {
-            background: linear-gradient(135deg, #9d174d, #db2777, #f472b6);
-            color: white;
-            padding: 3rem 2.5rem;
+        /* HEADER EDGY STYLE */
+        .portfolio-header {
+            background: var(--orange-accent);
+            color: var(--text-main);
+            padding: 3.5rem 2.5rem;
+            border-bottom: 3px solid var(--border-color);
         }
-        .wiki-header h1 {
-            margin: 0 0 5px 0;
-            font-size: 2.2rem;
-            letter-spacing: -0.5px;
+        .portfolio-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
         }
-        .wiki-meta {
-            font-size: 0.95rem;
-            opacity: 0.95;
+        .portfolio-meta {
+            font-size: 1rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
+            display: inline-block;
+            background: #ffffff;
+            padding: 5px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
         }
         .catchy-bio {
-            font-size: 1.15rem;
-            font-weight: 400;
-            background: rgba(255, 255, 255, 0.18);
-            padding: 15px 20px;
-            border-radius: 10px;
-            border-left: 4px solid #fff1f2;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: var(--yellow-accent);
+            padding: 18px 25px;
+            border: 3px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 4px 4px 0px var(--border-color);
             margin: 0;
         }
 
-        .wiki-content {
+        .portfolio-content {
             padding: 2.5rem;
         }
 
         h2 {
-            color: var(--primary-color);
-            font-size: 1.4rem;
-            border-bottom: 2px solid var(--soft-blossom);
-            padding-bottom: 8px;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            color: var(--text-main);
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-bottom: 4px solid var(--green-accent);
+            padding-bottom: 5px;
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+            display: inline-block;
         }
         h2:first-of-type { margin-top: 0; }
 
-        p { margin-bottom: 1rem; color: #475569; }
+        p { margin-bottom: 1rem; font-weight: 500; font-size: 1.05rem; }
 
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 1rem;
+            gap: 25px;
+            margin-top: 1.5rem;
         }
+
+        /* CARD NEO-BRUTALISM */
         .card {
-            border: 1px solid var(--border-color);
-            padding: 1.5rem;
+            border: 3px solid var(--border-color);
+            padding: 1.8rem;
             border-radius: 12px;
             background: #ffffff;
+            box-shadow: 6px 6px 0px var(--border-color);
             transition: all 0.2s ease;
         }
         .card:hover {
-            border-color: var(--accent-color);
-            box-shadow: 0 6px 16px rgba(219, 39, 119, 0.08);
-            transform: translateY(-2px);
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0px var(--border-color);
         }
         .card h3 {
             margin-top: 0;
-            color: var(--primary-color);
-            font-size: 1.1rem;
+            color: var(--text-main);
+            font-size: 1.25rem;
+            font-weight: 800;
         }
 
-        .visual-box {
-            background: var(--peach-card);
-            height: 130px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #9f1239;
-            font-size: 0.85rem;
-            margin-bottom: 12px;
-            border: 2px dashed #f472b6;
-            text-align: center;
-            padding: 10px;
-        }
-
-        /* Link Deskripsi SEO Rank 1 Style */
+        /* Link Deskripsi SEO */
         .seo-link-box {
-            background: var(--peach-card);
-            border: 1px solid #fbcfe8;
+            background: var(--green-accent);
+            border: 3px solid var(--border-color);
             border-radius: 12px;
-            padding: 1.2rem 1.5rem;
-            margin-top: 1rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 15px;
+            box-shadow: 5px 5px 0px var(--border-color);
         }
         .seo-link-box p {
             margin: 0;
-            color: #831843;
-            font-size: 0.95rem;
+            font-weight: 700;
+            font-size: 1.05rem;
         }
 
         /* 5 Traits List Style */
         .traits-list {
             list-style: none;
             padding: 0;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 15px;
         }
         .traits-list li {
-            background: var(--peach-card);
-            border: 1px solid var(--border-color);
-            padding: 12px 15px;
+            background: #ffffff;
+            border: 3px solid var(--border-color);
+            padding: 12px 18px;
             border-radius: 8px;
-            font-size: 0.95rem;
-            color: var(--primary-color);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            box-shadow: 4px 4px 0px var(--border-color);
         }
         .traits-list li:nth-child(5) {
             grid-column: 1 / -1;
+            background: var(--yellow-accent);
         }
 
+        /* TAGS */
         .tag {
-            background: var(--soft-blossom);
-            color: var(--primary-color);
-            padding: 4px 10px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 600;
+            background: #ffffff;
+            color: var(--text-main);
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: 800;
             display: inline-block;
-            margin-bottom: 8px;
-            margin-right: 5px;
-            border: 1px solid #fbcfe8;
+            margin-bottom: 10px;
+            margin-right: 6px;
+            border: 2px solid var(--border-color);
+            text-transform: uppercase;
         }
         .tag-highlight {
-            background: #f472b6;
-            color: #ffffff;
-            border-color: #db2777;
+            background: var(--yellow-accent);
+        }
+        .tag-green {
+            background: var(--green-accent);
         }
 
-        a { color: var(--accent-color); text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; color: var(--accent-hover); }
+        a { color: var(--text-main); text-decoration: none; font-weight: 800; }
+        a:hover { text-decoration: underline; }
 
+        /* CTA BUTTONS */
         .cta-container {
-            margin-top: 2.5rem;
-            padding: 2rem;
-            background: var(--peach-card);
+            margin-top: 3.5rem;
+            padding: 2.5rem;
+            background: var(--yellow-accent);
             border-radius: 12px;
             text-align: center;
-            border: 1px dashed var(--border-color);
+            border: 3px solid var(--border-color);
+            box-shadow: 6px 6px 0px var(--border-color);
         }
         .cta-btn {
             display: inline-block;
-            background: var(--accent-color);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 10px;
-            font-weight: 600;
-            transition: background 0.2s;
-            margin: 5px;
-            box-shadow: 0 4px 12px rgba(219, 39, 119, 0.2);
+            background: var(--text-main);
+            color: #ffffff;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+            margin: 10px;
+            border: 3px solid var(--border-color);
         }
         .cta-btn:hover {
-            background: var(--accent-hover);
+            background: var(--green-accent);
+            color: var(--text-main);
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px var(--border-color);
             text-decoration: none;
-            color: white;
         }
 
         footer {
             text-align: center;
-            padding: 1.5rem;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--border-color);
             background: #ffffff;
         }
 
         @media (max-width: 768px) {
             .grid-2, .traits-list { grid-template-columns: 1fr; }
-            .wiki-container { margin: 10px; border-radius: 0; border: none; }
+            .portfolio-container { margin: 15px; border-radius: 8px; }
             .seo-link-box { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
 <body>
 
-<div class="wiki-container">
+<div class="portfolio-container">
     
-    <!-- HEADER WIKI STYLE -->
-    <div class="wiki-header">
+    <!-- HEADER -->
+    <div class="portfolio-header">
         <h1>Safira Hana R.</h1>
-        <div class="wiki-meta">📍 Semarang, Indonesia &bull; SEO Content Writer</div>
+        <div class="portfolio-meta">📍 Semarang, ID &bull; SEO Content Writer</div>
         <p class="catchy-bio">
-            "Meracik kata, membedah data, dan membawa artikel duduk manis di halaman pertama Google." 🌸
+            "Nggak obral janji pasti rank satu, tapi siap meracik tulisan yang relevan, awet dibaca, dan pastinya ramah SEO."
         </p>
     </div>
 
-    <div class="wiki-content">
+    <div class="portfolio-content">
 
         <!-- TENTANG AKU -->
         <h2>📌 Tentang Aku</h2>
-        <p>Halo! Aku Safira, seorang penulis yang memadukan latar belakang <strong>Sosiologi</strong> dengan keahlian <em>SEO Content Writing</em>. Pendekatan ini membuatku tidak hanya fokus pada kata kunci, tetapi juga memahami apa yang benar-benar dicari dan dirasakan oleh pembaca.</p>
+        <p>Halo, aku Safira. Sebagai penulis artikel, aku paling suka meracik konten <em>evergreen</em>. Tujuannya simpel aja, supaya artikel yang kutulis bisa terus bermanfaat dan relevan dalam jangka waktu yang lama. Meski begitu, aku tetap terbuka kalau harus nulis konten yang lagi tren.</p>
 
-        <!-- 5 PRINSIP / SIFAT KERJA -->
-        <h2>✨ Prinsip & Etos Kerja</h2>
+        <!-- PRINSIP KERJA -->
+        <h2>✨ Prinsip Kerja</h2>
         <ul class="traits-list">
-            <li>🌱 Suka belajar hal baru & eksplorasi tren</li>
-            <li>💬 Terbuka pada kritik & masukan membangun</li>
-            <li>🤝 Kolaboratif dan mudah beradaptasi</li>
-            <li>🎯 Teliti dalam riset & struktur penulisan</li>
-            <li>⏱️ Konsisten menjaga ketepatan waktu pengerjaan</li>
+            <li>🌱 Suka ngulik hal baru</li>
+            <li>💬 Terbuka dengan kritik membangun</li>
+            <li>🤝 Gampang adaptasi & kerja bareng</li>
+            <li>🔍 Rajin riset dan cek fakta</li>
+            <li>⏱️ Komit selesaikan tugas</li>
         </ul>
 
-        <!-- LINK DESKRIPSI SEO RANK 1 -->
+        <!-- PENCAPAIAN SEO -->
         <h2>🏆 Pencapaian SEO</h2>
         <div class="seo-link-box">
-            <p>📈 <strong>Catatan Kinerja:</strong> Beberapa artikel pilihan yang aku riset dan tulis berhasil menduduki <strong>Peringkat 1 di Google</strong> secara organik.</p>
-            <a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank">Lihat Karya &rarr;</a>
+            <p>📈 Beberapa artikel yang diriset dan ditulis secara organik berhasil menembus <strong>Peringkat 1 di Google</strong>.</p>
+            <a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank" style="background: #fff; padding: 8px 15px; border: 2px solid #111; border-radius: 5px;">Lihat Bukti &rarr;</a>
         </div>
 
-        <!-- HASIL KARYA (WEB TERSENDIRI) -->
-        <h2>📂 Hasil Karya & Artikel Web</h2>
+        <!-- HASIL KARYA -->
+        <h2>📂 Portofolio Web</h2>
         <div class="grid-2">
             <div class="card">
-                <h3>✍️ Good News From Indonesia (GNFI)</h3>
+                <h3>Good News From Indonesia</h3>
                 <span class="tag tag-highlight">Web Content</span> <span class="tag">SEO</span>
                 <p>Menulis artikel organik dengan riset mendalam agar konten terus relevan dan dibaca dalam jangka panjang.</p>
-                <p><a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank">Kunjungi Author Page GNFI &rarr;</a></p>
+                <p><a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank">Kunjungi Author Page &rarr;</a></p>
             </div>
             
             <div class="card">
-                <h3>✍️ Sekawan Media</h3>
-                <span class="tag tag-highlight">Article</span> <span class="tag">Tech & Business</span>
+                <h3>Sekawan Media</h3>
+                <span class="tag tag-highlight">Article</span> <span class="tag">Tech & Biz</span>
                 <p>Memproduksi artikel informatif dengan struktur SEO yang rapi, terarah, dan mudah dipahami pembaca.</p>
-                <p><a href="https://sitespirit.co/author/safira_content_intern26/" target="_blank">Kunjungi Sekawan Media &rarr;</a></p>
+                <p><a href="https://sitespirit.co/author/safira_content_intern26/" target="_blank">Lihat Artikel &rarr;</a></p>
             </div>
 
             <div class="card" style="grid-column: 1 / -1;">
-                <h3>✍️ SiteSpirit</h3>
+                <h3>SiteSpirit</h3>
                 <span class="tag tag-highlight">Content Writing</span>
                 <p>Menyusun berbagai rubrik artikel informatif dengan riset topik yang akurat selama masa penugasan konten.</p>
-                <p><a href="https://sitespirit.co/author/safira_content_intern26/" target="_blank">Kunjungi SiteSpirit &rarr;</a></p>
+                <p><a href="https://sitespirit.co/author/safira_content_intern26/" target="_blank">Kunjungi Halaman Penulis &rarr;</a></p>
             </div>
         </div>
 
-        <!-- PREVIEW KONTEN VISUAL -->
-        <h2>🎨 Visual & Karya Media Sosial (CampusNet)</h2>
-        <p>Cuplikan dari hasil penyusunan <em>content plan</em> dan *copywriting* interaktif:</p>
+        <!-- KARYA MEDIA SOSIAL (TANPA GAMBAR/VISUAL BOX) -->
+        <h2>📱 Karya Media Sosial (CampusNet)</h2>
+        <p>Cuplikan dari hasil penyusunan <em>content plan</em> dan <em>copywriting</em> interaktif:</p>
         <div class="grid-2">
             <div class="card">
-                <div class="visual-box">📸 [Screenshot Carousel Instagram]</div>
                 <h3>Carousel & Copywriting</h3>
-                <p style="font-size: 0.9rem;">Membuat 35+ konten edukatif interaktif dengan narasi yang memikat audiens.</p>
+                <span class="tag tag-green">Social Media</span>
+                <p>Membuat 35+ konten edukatif interaktif dengan narasi yang dirancang khusus untuk memikat interaksi audiens.</p>
             </div>
             <div class="card">
-                <div class="visual-box">📊 [Screenshot Content Plan / Brief]</div>
                 <h3>Content Brief & Plan</h3>
-                <p style="font-size: 0.9rem;">Penyusunan jadwal dan riset topik mingguan yang terstruktur.</p>
+                <span class="tag tag-green">Strategy</span>
+                <p>Penyusunan jadwal publikasi, struktur <em>briefing</em> konten, dan riset topik mingguan yang terarah.</p>
             </div>
         </div>
 
         <!-- PENDIDIKAN & SERTIFIKASI -->
         <h2>🎓 Pendidikan & Sertifikasi</h2>
-        <ul>
-            <li><strong>S1 Sosiologi</strong> — Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens.</li>
-            <li><strong>GNFI Writing Camp Batch 1</strong> — Pelatihan intensif penulisan dan jurnalistik warga.</li>
+        <ul style="padding-left: 20px; font-weight: 500;">
+            <li style="margin-bottom: 10px;"><strong>S1 Sosiologi</strong> — Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens.</li>
+            <li style="margin-bottom: 10px;"><strong>GNFI Writing Camp Batch 1</strong> — Pelatihan intensif penulisan dan jurnalistik warga.</li>
             <li><strong>GNFI x Future Skills</strong> — Program pengembangan kompetensi digital dan penulisan strategis.</li>
         </ul>
 
@@ -320,33 +329,32 @@
             <span class="tag tag-highlight">SEO Content Writing</span>
             <span class="tag tag-highlight">Keyword Research</span>
             <span class="tag">Content Planning</span>
-            <span class="tag">Social Media Copywriting</span>
+            <span class="tag">Copywriting</span>
         </div>
-        <p style="margin-bottom: 5px;"><strong>Perangkat Kerja & Pengecekan:</strong></p>
+        <p style="margin-bottom: 10px; font-weight: 700;">Perangkat Kerja Utama:</p>
         <div>
-            <span class="tag">Google Search Console</span>
-            <span class="tag">Google Trends</span>
-            <span class="tag">Duplicate Checker</span>
-            <span class="tag">Ubersuggest / Ahrefs</span>
-            <span class="tag">Google Docs & Sheets</span>
+            <span class="tag tag-green">Google Search Console</span>
+            <span class="tag tag-green">Google Trends</span>
+            <span class="tag tag-green">Ahrefs / Ubersuggest</span>
+            <span class="tag">Google Workspace</span>
             <span class="tag">Grammarly</span>
-            <span class="tag">Notion & AI Assistant</span>
+            <span class="tag">Notion</span>
         </div>
 
-        <!-- INTERACTIVE CTA / HUBUNGI KAMI -->
+        <!-- CALL TO ACTION -->
         <div class="cta-container">
-            <h2 style="margin-top: 0; border: none; justify-content: center; color: var(--primary-color);">💬 Hubungi Kami</h2>
-            <p>Tertarik berkolaborasi untuk meningkatkan performa konten dan SEO websitemu? Mari terhubung!</p>
-            
-            <a href="mailto:safirahana.r@gmail.com" class="cta-btn">✉️ Kirim Email</a>
-            <a href="https://www.linkedin.com/" class="cta-btn" target="_blank" style="background: #0284c7; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);">💼 LinkedIn</a>
+            <h2 style="margin-top: 0; border: none; font-size: 2rem;">Tertarik Kerja Bareng?</h2>
+            <p style="font-size: 1.1rem; font-weight: 600;">Mari ngobrol tentang bagaimana konten organik bisa membantu websitemu.</p>
+            <br>
+            <a href="mailto:safirahana.r@gmail.com" class="cta-btn">Kirim Email</a>
+            <a href="https://www.linkedin.com/" class="cta-btn" target="_blank" style="background: #0077b5; border-color: #0077b5;">LinkedIn Profile</a>
         </div>
 
     </div>
 
     <footer>
-        &copy; 2026 Safira Hana R. | Dokumentasi Portofolio SEO Content Writer.
-    </div>
+        &copy; 2026 Safira Hana R. &bull; Didesain agar relevan & awet dibaca.
+    </footer>
 
 </div>
 
