@@ -3,151 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portofolio Safira H.R. - SEO Content Writer dengan pendekatan riset audiens yang mendalam.">
-    <title>Safira | SEO Content Writer</title>
+    <meta name="description" content="Portofolio Safira Hana R. - SEO Content Writer dari Semarang.">
+    <title>Safira Hana R. | SEO Content Writer</title>
     
     <style>
         /* =========================================================
-           🎨 TEMA WARNA: MATCHA & ALAM 🎨
+           🌸 UI/UX WIKI THEME: SPRING BLOSSOM 🌸
            ========================================================= */
         :root {
-            --warna-utama: #4d7c0f;       /* Hijau matcha/zaitun tua */
-            --warna-hover: #3f6212;       /* Hijau lebih gelap saat disentuh */
-            --warna-header: #365314;      /* Hijau alam untuk header */
-            --warna-background: #f4f6f0;  /* Abu-abu kehijauan muda (adem di mata) */
-            --warna-teks-judul: #1a2e05;  /* Hijau sangat gelap untuk judul */
+            --bg-color: #fffafb;          
+            --primary-color: #831843;     
+            --accent-color: #db2777;      
+            --accent-hover: #be185d;      
+            --soft-blossom: #fce7f3;      
+            --peach-card: #fff1f2;        
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border-color: #fbcfe8;      
         }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: var(--warna-background); }
-        header { background-color: var(--warna-header); color: white; padding: 4rem 2rem; text-align: center; }
-        header h1 { margin: 0; font-size: 2.8rem; letter-spacing: -1px; }
-        header p { font-size: 1.2rem; color: #ecf0f1; font-weight: 300; margin-top: 10px; }
-        .container { max-width: 900px; margin: -30px auto 0; padding: 0 20px; position: relative; }
-        .section { background: white; padding: 2.5rem; margin-bottom: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: var(--warna-teks-judul); border-bottom: 3px solid var(--warna-utama); padding-bottom: 8px; display: inline-block; margin-top: 0; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 1rem; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 1rem; }
-        .card { border: 1px solid #eee; padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; background: #fff; }
-        .card:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
-        .card h3 { margin-top: 0; color: var(--warna-utama); font-size: 1.2rem; }
-        
-        /* Kotak Preview Gambar/Visual */
-        .visual-box { background: #e9ecef; height: 140px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #6c757d; font-size: 0.85rem; margin-bottom: 12px; text-align: center; border: 2px dashed #ced4da; }
-        
-        .tag { background: #ecfccb; color: #3f6212; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 10px; margin-right: 5px; }
-        a { color: var(--warna-utama); text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; }
-        .contact-btn { display: inline-block; background: var(--warna-utama); color: white; padding: 10px 24px; border-radius: 25px; margin-top: 15px; margin-right: 10px; transition: background 0.3s; }
-        .contact-btn:hover { background: var(--warna-hover); text-decoration: none; color: white; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        footer { text-align: center; padding: 2rem; color: #636e72; font-size: 0.9rem; }
-        @media (max-width: 768px) { .grid, .grid-3 { grid-template-columns: 1fr; } }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        .wiki-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(219, 39, 119, 0.05);
+            overflow: hidden;
+        }
+
+        .wiki-header {
+            background: linear-gradient(135deg, #9d174d, #db2777, #f472b6);
+            color: white;
+            padding: 3rem 2.5rem;
+        }
+        .wiki-header h1 {
+            margin: 0 0 5px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+        .wiki-meta {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+        .catchy-bio {
+            font-size: 1.15rem;
+            font-weight: 400;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 15px 20px;
+            border-radius: 10px;
+            border-left: 4px solid #fff1f2;
+            margin: 0;
+        }
+
+        .wiki-content {
+            padding: 2.5rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--soft-blossom);
+            padding-bottom: 8px;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h2:first-of-type { margin-top: 0; }
+
+        p { margin-bottom: 1rem; color: #475569; }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+        .card {
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: #ffffff;
+            transition: all 0.2s ease;
+        }
+        .card:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 6px 16px rgba(219, 39, 119, 0.08);
+            transform: translateY(-2px);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .visual-box {
+            background: var(--peach-card);
+            height: 130px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9f1239;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            border: 2px dashed #f472b6;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Link Deskripsi SEO Rank 1 Style */
+        .seo-link-box {
+            background: var(--peach-card);
+            border: 1px solid #fbcfe8;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .seo-link-box p {
+            margin: 0;
+            color: #831843;
+            font-size: 0.95rem;
+        }
+
+        /* 5 Traits List Style */
+        .traits-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .traits-list li {
+            background: var(--peach-card);
+            border: 1px solid var(--border-color);
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .traits-list li:nth-child(5) {
+            grid-column: 1 / -1;
+        }
+
+        .tag {
+            background: var(--soft-blossom);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 8px;
+            margin-right: 5px;
+            border: 1px solid #fbcfe8;
+        }
+        .tag-highlight {
+            background: #f472b6;
+            color: #ffffff;
+            border-color: #db2777;
+        }
+
+        a { color: var(--accent-color); text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; color: var(--accent-hover); }
+
+        .cta-container {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            background: var(--peach-card);
+            border-radius: 12px;
+            text-align: center;
+            border: 1px dashed var(--border-color);
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: background 0.2s;
+            margin: 5px;
+            box-shadow: 0 4px 12px rgba(219, 39, 119, 0.2);
+        }
+        .cta-btn:hover {
+            background: var(--accent-hover);
+            text-decoration: none;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            background: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .traits-list { grid-template-columns: 1fr; }
+            .wiki-container { margin: 10px; border-radius: 0; border: none; }
+            .seo-link-box { flex-direction: column; align-items: flex-start; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Halo, Aku Safira! 👋</h1>
-    <p>SEO Content Writer</p>
-</header>
-
-<div class="container">
+<div class="wiki-container">
     
-    <!-- TENTANG AKU -->
-    <div class="section">
-        <h2>Tentang Aku</h2>
-        <p>Sebagai penulis dengan latar belakang <strong>Sosiologi</strong>, aku terbiasa membedah tren dan mengamati perilaku audiens secara mendalam. Pendekatan ini membantuku memahami apa yang benar-benar dicari pembaca di mesin pencari. Aku terbiasa menyusun artikel web yang informatif serta meracik konten media sosial yang interaktif.</p>
+    <!-- HEADER WIKI STYLE -->
+    <div class="wiki-header">
+        <h1>Safira Hana R.</h1>
+        <div class="wiki-meta">📍 Semarang, Indonesia &bull; SEO Content Writer</div>
+        <p class="catchy-bio">
+            "Meracik kata, membedah data, dan membawa artikel duduk manis di halaman pertama Google." 🌸
+        </p>
     </div>
 
-    <!-- HASIL KARYA (ARTIKEL & WEB) -->
-    <div class="section">
-        <h2>Hasil Karya</h2>
-        <div class="grid">
+    <div class="wiki-content">
+
+        <!-- TENTANG AKU -->
+        <h2>📌 Tentang Aku</h2>
+        <p>Halo! Aku Safira, seorang penulis yang memadukan latar belakang <strong>Sosiologi</strong> dengan keahlian <em>SEO Content Writing</em>. Pendekatan ini membuatku tidak hanya fokus pada kata kunci, tetapi juga memahami apa yang benar-benar dicari dan dirasakan oleh pembaca.</p>
+
+        <!-- 5 PRINSIP / SIFAT KERJA -->
+        <h2>✨ Prinsip & Etos Kerja</h2>
+        <ul class="traits-list">
+            <li>🌱 Suka belajar hal baru & eksplorasi tren</li>
+            <li>💬 Terbuka pada kritik & masukan membangun</li>
+            <li>🤝 Kolaboratif dan mudah beradaptasi</li>
+            <li>🎯 Teliti dalam riset & struktur penulisan</li>
+            <li>⏱️ Konsisten menjaga ketepatan waktu pengerjaan</li>
+        </ul>
+
+        <!-- LINK DESKRIPSI SEO RANK 1 -->
+        <h2>🏆 Pencapaian SEO</h2>
+        <div class="seo-link-box">
+            <p>📈 <strong>Catatan Kinerja:</strong> Beberapa artikel pilihan yang aku riset dan tulis berhasil menduduki <strong>Peringkat 1 di Google</strong> secara organik.</p>
+            <a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank">Lihat Karya &rarr;</a>
+        </div>
+
+        <!-- HASIL KARYA (WEB TERSENDIRI) -->
+        <h2>📂 Hasil Karya & Artikel Web</h2>
+        <div class="grid-2">
             <div class="card">
                 <h3>✍️ Good News From Indonesia (GNFI)</h3>
-                <span class="tag">Web Content</span> <span class="tag">SEO</span>
-                <p>Menulis artikel organik dengan riset topik yang mendalam agar konten relevan dan konsisten dibaca.</p>
+                <span class="tag tag-highlight">Web Content</span> <span class="tag">SEO</span>
+                <p>Menulis artikel organik dengan riset mendalam agar konten terus relevan dan dibaca dalam jangka panjang.</p>
                 <p><a href="https://www.goodnewsfromindonesia.id/u/safirhn1" target="_blank">Kunjungi Author Page GNFI &rarr;</a></p>
             </div>
             
             <div class="card">
-                <h3>✍️ Sekawan Media & SiteSpirit</h3>
-                <span class="tag">Article</span> <span class="tag">Tech/Business</span>
-                <p>Memproduksi artikel informatif dengan struktur SEO yang rapi dan mudah dipahami pembaca.</p>
+                <h3>✍️ Sekawan Media</h3>
+                <span class="tag tag-highlight">Article</span> <span class="tag">Tech & Business</span>
+                <p>Memproduksi artikel informatif dengan struktur SEO yang rapi, terarah, dan mudah dipahami pembaca.</p>
+                <p><a href="https://sitespirit.co/author/safira_content_intern26/" target="_blank">Kunjungi Sekawan Media &rarr;</a></p>
+            </div>
+
+            <div class="card" style="grid-column: 1 / -1;">
+                <h3>✍️ SiteSpirit</h3>
+                <span class="tag tag-highlight">Content Writing</span>
+                <p>Menyusun berbagai rubrik artikel informatif dengan riset topik yang akurat selama masa penugasan konten.</p>
                 <p><a href="https://sitespirit.co/author/safira_content_intern26/" target="_blank">Kunjungi SiteSpirit &rarr;</a></p>
             </div>
         </div>
-    </div>
 
-    <!-- PREVIEW 3 CONTOH KONTEN VISUAL -->
-    <div class="section">
-        <h2>Contoh Konten & Visual (CampusNet)</h2>
-        <p>Berikut adalah beberapa cuplikan visual dari karya *copywriting* dan *content plan* yang pernah aku produksi:</p>
-        
-        <div class="grid-3">
+        <!-- PREVIEW KONTEN VISUAL -->
+        <h2>🎨 Visual & Karya Media Sosial (CampusNet)</h2>
+        <p>Cuplikan dari hasil penyusunan <em>content plan</em> dan *copywriting* interaktif:</p>
+        <div class="grid-2">
             <div class="card">
-                <div class="visual-box">📸 [Screenshot Carousel 1]</div>
-                <h3>Carousel Instagram 1</h3>
-                <p style="font-size: 0.9rem;">Contoh *hook* dan isi *copy* edukatif interaktif untuk audiens.</p>
+                <div class="visual-box">📸 [Screenshot Carousel Instagram]</div>
+                <h3>Carousel & Copywriting</h3>
+                <p style="font-size: 0.9rem;">Membuat 35+ konten edukatif interaktif dengan narasi yang memikat audiens.</p>
             </div>
             <div class="card">
-                <div class="visual-box">📸 [Screenshot Carousel 2]</div>
-                <h3>Carousel Instagram 2</h3>
-                <p style="font-size: 0.9rem;">Penyusunan narasi mingguan yang ringkas dan padat informasi.</p>
-            </div>
-            <div class="card">
-                <div class="visual-box">📊 [Screenshot Content Plan]</div>
-                <h3>Content Plan / Brief</h3>
-                <p style="font-size: 0.9rem;">Contoh riset ide dan struktur materi sebelum diproduksi.</p>
+                <div class="visual-box">📊 [Screenshot Content Plan / Brief]</div>
+                <h3>Content Brief & Plan</h3>
+                <p style="font-size: 0.9rem;">Penyusunan jadwal dan riset topik mingguan yang terstruktur.</p>
             </div>
         </div>
-    </div>
 
-    <!-- PENDIDIKAN & SERTIFIKASI -->
-    <div class="section">
-        <h2>Pendidikan & Sertifikasi</h2>
+        <!-- PENDIDIKAN & SERTIFIKASI -->
+        <h2>🎓 Pendidikan & Sertifikasi</h2>
         <ul>
             <li><strong>S1 Sosiologi</strong> — Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens.</li>
             <li><strong>GNFI Writing Camp Batch 1</strong> — Pelatihan intensif penulisan dan jurnalistik warga.</li>
             <li><strong>GNFI x Future Skills</strong> — Program pengembangan kompetensi digital dan penulisan strategis.</li>
         </ul>
-    </div>
 
-    <!-- KEAHLIAN & SEO TOOLS -->
-    <div class="section">
-        <h2>Keahlian & Tools</h2>
-        <p style="margin-bottom: 15px;">
-            <span class="tag">SEO Content Writing</span>
-            <span class="tag">Audience & Keyword Research</span>
+        <!-- KEAHLIAN & TOOLS -->
+        <h2>🛠️ Keahlian & Tools</h2>
+        <div style="margin-bottom: 15px;">
+            <span class="tag tag-highlight">SEO Content Writing</span>
+            <span class="tag tag-highlight">Keyword Research</span>
             <span class="tag">Content Planning</span>
             <span class="tag">Social Media Copywriting</span>
-        </p>
-        <p><strong>Tools & Perangkat Kerja:</strong></p>
-        <p>
+        </div>
+        <p style="margin-bottom: 5px;"><strong>Perangkat Kerja & Pengecekan:</strong></p>
+        <div>
             <span class="tag">Google Search Console</span>
             <span class="tag">Google Trends</span>
-            <span class="tag">Ubersuggest / Ahrefs (Basic)</span>
+            <span class="tag">Duplicate Checker</span>
+            <span class="tag">Ubersuggest / Ahrefs</span>
             <span class="tag">Google Docs & Sheets</span>
             <span class="tag">Grammarly</span>
-            <span class="tag">Duplicate Checker</span>
             <span class="tag">Notion & AI Assistant</span>
-        </p>
+        </div>
+
+        <!-- INTERACTIVE CTA / HUBUNGI KAMI -->
+        <div class="cta-container">
+            <h2 style="margin-top: 0; border: none; justify-content: center; color: var(--primary-color);">💬 Hubungi Kami</h2>
+            <p>Tertarik berkolaborasi untuk meningkatkan performa konten dan SEO websitemu? Mari terhubung!</p>
+            
+            <a href="mailto:safirahana.r@gmail.com" class="cta-btn">✉️ Kirim Email</a>
+            <a href="https://www.linkedin.com/" class="cta-btn" target="_blank" style="background: #0284c7; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);">💼 LinkedIn</a>
+        </div>
+
     </div>
 
-    <!-- KONTAK -->
-    <div class="section" style="text-align: center;">
-        <h2>Mari Berkolaborasi!</h2>
-        <p>Sedang mencari penulis konten untuk mengembangkan visibilitas website atau media sosialmu?</p>
-        
-        <a href="mailto:safirahana.r@gmail.com" class="contact-btn">✉️ Email Aku</a>
-        <a href="https://www.linkedin.com/" class="contact-btn" target="_blank">💼 LinkedIn</a>
+    <footer>
+        &copy; 2026 Safira Hana R. | Dokumentasi Portofolio SEO Content Writer.
     </div>
+
 </div>
-
-<footer>
-    &copy; 2026 Safira H.R. | Dirancang khusus untuk pembaca setia dan mesin pencari.
-</footer>
 
 </body>
 </html>
