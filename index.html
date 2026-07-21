@@ -8,20 +8,19 @@
     
     <style>
         /* =========================================================
-           ✨ PALET WARNA: CHINESE BLUE, CEIL, PEARLY PURPLE, DESERT SAND, ANTIQUE RUBY
+           ✨ PALET WARNA SANTORINI: SUNFLOWER YELLOW, AEGEAN BLUE, OLIVE GREEN, SANTORINI WHITE
            ========================================================= */
         :root {
-            --bg-body: #f8fafc;
+            --bg-body: #F7F5F0;           /* Santorini White lembut */
             --bg-card: #ffffff;
-            --text-main: #852736;         /* Antique Ruby */
-            --text-muted: #4b5563;
-            --border-subtle: #E2C99E;     /* Desert Sand */
+            --text-main: #0077C8;         /* Aegean Blue */
+            --text-muted: #4B5563;
+            --border-subtle: #F2C400;     /* Sunflower Yellow */
             
-            --chinese-blue: #414B9E;
-            --ceil: #9792CB;
-            --pearly-purple: #AA74A0;
-            --desert-sand: #E2C99E;
-            --antique-ruby: #852736;
+            --sunflower-yellow: #F2C400;
+            --aegean-blue: #0077C8;
+            --olive-green: #486B1F;
+            --santorini-white: #F7F4EC;
         }
 
         * {
@@ -39,7 +38,7 @@
             overflow-x: hidden;
         }
 
-        /* 🔠 BACKGROUND: KUMPULAN AKSARA LINTAS NEGARA DENGAN WARNA PALET */
+        /* 🔠 BACKGROUND: KUMPULAN AKSARA LINTAS NEGARA DENGAN WARNA PALET SANTORINI */
         body::before {
             content: "INDONESIA • 🇯🇵 NIHON • 🇰🇷 HANGUK • 🇺🇸 AMERICA • 🇫🇷 FRANCE • 🇪🇸 ESPAÑA • 🇩🇪 DEUTSCHLAND • 🇮🇹 ITALIA • 🇬🇧 UNITED KINGDOM • 🇨🇳 ZHONGGUO • 🇯🇵 TOKYO • 🇰🇷 SEOUL • 🇫🇷 PARIS • 🇺🇸 NEW YORK • 🇪🇸 MADRID • 🇮🇹 ROMA • 🇩🇪 BERLIN • 🇬🇧 LONDON • 🇨🇳 BEIJING • INDONESIA • NIHON • HANGUK • AMERICA • FRANCE • ESPAÑA • DEUTSCHLAND • ITALIA • UNITED KINGDOM • ZHONGGUO •";
             position: fixed;
@@ -47,11 +46,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            font-size: 0.85rem;
-            font-weight: 600;
-            line-height: 3;
-            color: var(--chinese-blue);
-            opacity: 0.07; /* Dibuat sangat tipis dan samar */
+            font-size: 0.9rem;
+            font-weight: 700;
+            line-height: 2.8;
+            color: var(--aegean-blue);
+            opacity: 0.15; /* Jelas dan terlihat samar */
             z-index: -1;
             white-space: normal;
             word-break: break-all;
@@ -65,20 +64,31 @@
             margin: 60px auto;
             background: var(--bg-card);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(133, 39, 54, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 119, 200, 0.1);
             overflow: hidden;
-            border: 2px solid var(--antique-ruby);
+            border: 2px solid var(--aegean-blue);
             position: relative;
             z-index: 1;
         }
 
         /* HEADER */
         .portfolio-header {
-            background: var(--chinese-blue);
+            background: var(--aegean-blue);
             color: #ffffff;
             padding: 4rem 3rem 2.5rem 3rem;
-            border-bottom: 2px solid var(--antique-ruby);
+            border-bottom: 2px solid var(--sunflower-yellow);
+            text-align: center;
         }
+        
+        .portfolio-top-tag {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: var(--sunflower-yellow);
+            margin-bottom: 10px;
+        }
+
         .portfolio-header h1 {
             margin: 0 0 8px 0;
             font-size: 2.5rem;
@@ -88,7 +98,7 @@
         }
         .portfolio-meta {
             font-size: 0.95rem;
-            color: var(--desert-sand);
+            color: var(--sunflower-yellow);
             font-weight: 600;
             margin-bottom: 1.5rem;
             display: inline-block;
@@ -97,13 +107,14 @@
             font-size: 1.15rem;
             font-weight: 400;
             color: #ffffff;
-            margin: 0;
+            margin: 0 auto;
+            max-width: 600px;
             line-height: 1.6;
-            padding-left: 16px;
-            border-left: 4px solid var(--desert-sand);
-            background: rgba(151, 146, 203, 0.25);
             padding: 16px 20px;
+            border-left: 4px solid var(--sunflower-yellow);
+            background: rgba(242, 196, 0, 0.2);
             border-radius: 0 10px 10px 0;
+            text-align: left;
         }
 
         .portfolio-content {
@@ -111,7 +122,7 @@
         }
 
         h2 {
-            color: var(--antique-ruby);
+            color: var(--aegean-blue);
             font-size: 1.25rem;
             font-weight: 800;
             letter-spacing: 0.5px;
@@ -121,7 +132,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            border-bottom: 2px solid var(--desert-sand);
+            border-bottom: 2px solid var(--sunflower-yellow);
             padding-bottom: 8px;
         }
         h2:first-of-type { margin-top: 0; }
@@ -137,27 +148,27 @@
 
         /* CARD */
         .card {
-            border: 1px solid var(--border-subtle);
+            border: 1px solid var(--sunflower-yellow);
             padding: 1.8rem;
             border-radius: 14px;
             background: var(--bg-card);
             transition: all 0.2s ease;
         }
         .card:hover {
-            border-color: var(--pearly-purple);
-            box-shadow: 0 6px 20px rgba(170, 116, 160, 0.15);
+            border-color: var(--olive-green);
+            box-shadow: 0 6px 20px rgba(72, 107, 31, 0.15);
         }
         .card h3 {
             margin-top: 0;
-            color: var(--antique-ruby);
+            color: var(--aegean-blue);
             font-size: 1.15rem;
             font-weight: 700;
         }
 
         /* SEO Box */
         .seo-link-box {
-            background: rgba(226, 201, 158, 0.15);
-            border: 1px solid var(--desert-sand);
+            background: rgba(242, 196, 0, 0.1);
+            border: 1px solid var(--sunflower-yellow);
             border-radius: 14px;
             padding: 1.8rem;
             margin-top: 1.5rem;
@@ -173,8 +184,8 @@
             gap: 12px;
         }
         .traits-list li {
-            background: rgba(170, 116, 160, 0.08);
-            border: 1px solid var(--border-subtle);
+            background: rgba(72, 107, 31, 0.08);
+            border: 1px solid var(--sunflower-yellow);
             padding: 12px 18px;
             border-radius: 10px;
             font-size: 0.95rem;
@@ -183,13 +194,13 @@
         }
         .traits-list li:nth-child(5) {
             grid-column: 1 / -1;
-            background: rgba(226, 201, 158, 0.3);
+            background: rgba(242, 196, 0, 0.2);
         }
 
         /* TAGS */
         .tag {
-            background: rgba(151, 146, 203, 0.15);
-            color: var(--chinese-blue);
+            background: rgba(0, 119, 200, 0.1);
+            color: var(--aegean-blue);
             padding: 5px 12px;
             border-radius: 6px;
             font-size: 0.8rem;
@@ -197,29 +208,29 @@
             display: inline-block;
             margin-bottom: 8px;
             margin-right: 6px;
-            border: 1px solid var(--border-subtle);
+            border: 1px solid var(--sunflower-yellow);
         }
         .tag-highlight {
-            background: rgba(170, 116, 160, 0.2);
-            color: var(--antique-ruby);
-            border-color: var(--pearly-purple);
+            background: rgba(72, 107, 31, 0.15);
+            color: var(--olive-green);
+            border-color: var(--olive-green);
         }
 
-        a { color: var(--chinese-blue); text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; color: var(--antique-ruby); }
+        a { color: var(--aegean-blue); text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; color: var(--sunflower-yellow); }
 
-        /* CTA / THANK YOU SECTION */
+        /* CTA SECTION */
         .cta-container {
             margin-top: 4rem;
             padding: 3rem 2rem;
-            background: rgba(226, 201, 158, 0.25);
+            background: rgba(242, 196, 0, 0.15);
             border-radius: 16px;
             text-align: center;
-            border: 2px solid var(--antique-ruby);
+            border: 2px solid var(--aegean-blue);
         }
         .cta-btn {
             display: inline-block;
-            background: var(--antique-ruby);
+            background: var(--aegean-blue);
             color: #ffffff;
             padding: 12px 30px;
             border-radius: 10px;
@@ -230,15 +241,15 @@
             text-decoration: none;
         }
         .cta-btn:hover {
-            background: var(--chinese-blue);
+            background: var(--olive-green);
             color: #ffffff;
             text-decoration: none;
         }
         .cta-btn.linkedin {
-            background: var(--chinese-blue);
+            background: var(--olive-green);
         }
         .cta-btn.linkedin:hover {
-            background: var(--antique-ruby);
+            background: var(--aegean-blue);
         }
 
         footer {
@@ -247,7 +258,7 @@
             font-weight: 500;
             font-size: 0.85rem;
             color: var(--text-muted);
-            border-top: 1px solid var(--border-subtle);
+            border-top: 1px solid var(--sunflower-yellow);
             background: var(--bg-card);
         }
 
@@ -265,6 +276,7 @@
     
     <!-- HEADER -->
     <div class="portfolio-header">
+        <div class="portfolio-top-tag">WELCOME TO MY PORTFOLIO</div>
         <h1>Safira Hana R.</h1>
         <div class="portfolio-meta">Semarang, ID &bull; SEO Content Writer</div>
         <p class="catchy-bio">
@@ -291,7 +303,7 @@
         <!-- PENCAPAIAN SEO -->
         <h2>Pencapaian SEO</h2>
         <div class="seo-link-box">
-            <p style="margin-bottom: 12px; font-size: 1rem; color: var(--text-main);">Beberapa artikel organik yang berhasil menembus <strong>Peringkat 1 di pencarian Google</strong>:</p>
+            <p style="margin-bottom: 12px; font-size: 1rem; color: var(--aegean-blue);">Beberapa artikel organik yang berhasil menembus <strong>Peringkat 1 di pencarian Google</strong>:</p>
             <ul style="margin: 0; padding-left: 20px; font-weight: 500; line-height: 1.8; color: var(--text-muted);">
                 <li><a href="https://www.goodnewsfromindonesia.id/2024/06/11/8-jenis-serabi-dengan-rasanya-yang-khas-dari-berbagai-daerah-di-indonesia" target="_blank">"jenis serabi"</a> — Good News From Indonesia</li>
                 <li><a href="https://www.sekawanmedia.co.id/blog/tanda-website-kena-hack/" target="_blank">"website kena hack"</a> — Sekawan Media</li>
@@ -347,10 +359,10 @@
         <!-- PENDIDIKAN & SERTIFIKASI -->
         <h2>Pendidikan & Sertifikasi</h2>
         <ul style="padding-left: 20px; font-weight: 400; color: var(--text-muted);">
-            <li style="margin-bottom: 10px;"><strong style="color: var(--antique-ruby);">S1 Sosiologi</strong> — Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens.</li>
-            <li style="margin-bottom: 10px;"><strong style="color: var(--antique-ruby);">GNFI Writing Camp Batch 1</strong> — Pelatihan intensif penulisan artikel SEO dan jurnalistik dasar.</li>
-            <li style="margin-bottom: 10px;"><strong style="color: var(--antique-ruby);">GNFI x Future Skills</strong> — Program pengembangan kompetensi digital, penulisan strategis, dan penulisan artikel sesuai kaidah PUEBI.</li>
-            <li><strong style="color: var(--antique-ruby);">Wikilatih Daring</strong> — Menulis artikel berbasis ensiklopedis dengan menerapkan kaidah bahasa Indonesia baku, PUEBI, dan EYD.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: var(--aegean-blue);">S1 Sosiologi</strong> — Mempelajari analisis tren sosial, struktur masyarakat, dan perilaku audiens.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: var(--aegean-blue);">GNFI Writing Camp Batch 1</strong> — Pelatihan intensif penulisan artikel SEO dan jurnalistik dasar.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: var(--aegean-blue);">GNFI x Future Skills</strong> — Program pengembangan kompetensi digital, penulisan strategis, dan penulisan artikel sesuai kaidah PUEBI.</li>
+            <li><strong style="color: var(--aegean-blue);">Wikilatih Daring</strong> — Menulis artikel berbasis ensiklopedis dengan menerapkan kaidah bahasa Indonesia baku, PUEBI, dan EYD.</li>
         </ul>
 
         <!-- KEAHLIAN & TOOLS -->
@@ -367,7 +379,7 @@
             <span class="tag">CMS Management</span>
             <span class="tag">Trend Analysis</span>
         </div>
-        <p style="margin-bottom: 10px; font-weight: 600; color: var(--text-main);">Perangkat Kerja Utama:</p>
+        <p style="margin-bottom: 10px; font-weight: 600; color: var(--aegean-blue);">Perangkat Kerja Utama:</p>
         <div>
             <span class="tag">Google Search Console</span>
             <span class="tag">Google Trends</span>
@@ -377,12 +389,13 @@
             <span class="tag">Notion</span>
         </div>
 
-        <!-- CALL TO ACTION (TERIMA KASIH DI BAWAH) -->
+        <!-- CALL TO ACTION & TERIMA KASIH DI PALING BAWAH -->
         <div class="cta-container">
-            <h2 style="margin-top: 0; border: none; font-size: 1.4rem; color: var(--antique-ruby); justify-content: center;">Terima Kasih!</h2>
-            <p style="font-size: 1.1rem; max-width: 550px; margin: 0 auto 1.5rem auto; color: var(--text-muted);">Tertarik Bekerja Sama?<br>Saat ini saya terbuka untuk kesempatan full-time di bidang writing dan SEO. Silakan hubungi saya untuk memulai diskusi.</p>
+            <h2 style="margin-top: 0; border: none; font-size: 1.4rem; color: var(--aegean-blue); justify-content: center;">Tertarik Bekerja Sama?</h2>
+            <p style="font-size: 1.05rem; max-width: 550px; margin: 0 auto 1.5rem auto; color: var(--text-muted);">Saat ini saya terbuka untuk kesempatan full-time di bidang writing dan SEO. Silakan hubungi saya untuk memulai diskusi.</p>
             <a href="mailto:safirahana.r@gmail.com" class="cta-btn">Kirim Email</a>
             <a href="https://www.linkedin.com/" class="cta-btn linkedin" target="_blank">LinkedIn Profile</a>
+            <div style="margin-top: 2rem; font-weight: 700; color: var(--aegean-blue); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">Terima kasih</div>
         </div>
 
     </div>
