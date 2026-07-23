@@ -8,18 +8,17 @@
     
     <style>
         /* =========================================================
-           ✨ TEMA: PASTEL SUNSET + SIDEBAR TOGGLE (BISA BUKA/TUTUP)
+           ✨ TEMA: FRESH MINT & SAGE + SIDEBAR SMOOTH TOGGLE
            ========================================================= */
         :root {
-            --bg-body: #FDFBF7;           
+            --bg-body: #F4F7F5;           
             --bg-card: #ffffff;
-            --text-main: #852736;         
-            --text-muted: #4b5563;
-            --border-subtle: #E2C99E;     
-            --chinese-blue: #414B9E;
-            --pearly-purple: #AA74A0;
-            --desert-sand: #E2C99E;
-            --antique-ruby: #852736;
+            --text-main: #1E3F20;         
+            --text-muted: #4A6B4E;        
+            --accent-mint: #E8F2EC;       
+            --border-subtle: #D0E1D4;     
+            --primary-green: #2C5E3B;     
+            --highlight-gold: #C2A649;    
             --sidebar-width: 260px;
         }
 
@@ -43,34 +42,39 @@
             position: fixed;
             top: 0; left: 0;
             width: 100vw; height: 100vh;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='%23852736' fill-opacity='0.07'%3E%3Cpath d='M10 15h20v4H10zM35 14h15v3H35zM55 16h25v4H55zM85 13h18v3H85zM110 15h22v4H110zM15 28h18v3H15zM40 27h20v4H40zM65 29h22v3H65zM95 26h28v4H95zM10 42h25v3H10zM40 40h15v4H40zM60 43h30v3H60zM95 41h20v4H95zM15 55h20v3H15zM40 54h18v4H40zM65 56h25v3H65zM95 55h22v4H95zM10 68h22v4H10zM38 67h16v3H38zM60 69h28v4H60zM92 68h25v3H92zM12 82h26v3H12zM43 81h15v4H43zM63 83h20v3H63zM90 80h22v4H90zM15 95h20v3H15zM40 94h22v4H40zM68 96h25v3H68zM98 95h18v4H98zM10 110h22v3H10zM38 108h18v4H38zM62 111h25v3H62zM92 109h20v4H92zM15 124h25v3H15zM45 123h15v4H45zM65 125h20v3H65zM90 122h25v4H90zM12 138h22v3H12zM40 137h20v4H40zM65 139h22v3H65zM92 136h28v4H92z'/%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='%232C5E3B' fill-opacity='0.05'%3E%3Cpath d='M10 15h20v4H10zM35 14h15v3H35zM55 16h25v4H55zM85 13h18v3H85zM110 15h22v4H110zM15 28h18v3H15zM40 27h20v4H40zM65 29h22v3H65zM95 26h28v4H95zM10 42h25v3H10zM40 40h15v4H40zM60 43h30v3H60zM95 41h20v4H95zM15 55h20v3H15zM40 54h18v4H40zM65 56h25v3H65zM95 55h22v4H95zM10 68h22v4H10zM38 67h16v3H38zM60 69h28v4H60zM92 68h25v3H92zM12 82h26v3H12zM43 81h15v4H43zM63 83h20v3H63zM90 80h22v4H90zM15 95h20v3H15zM40 94h22v4H40zM68 96h25v3H68zM98 95h18v4H98zM10 110h22v3H10zM38 108h18v4H38zM62 111h25v3H62zM92 109h20v4H92zM15 124h25v3H15zM45 123h15v4H45zM65 125h20v3H65zM90 122h25v4H90zM12 138h22v3H12zM40 137h20v4H40zM65 139h22v3H65zM92 136h28v4H92z'/%3E%3C/g%3E%3C/svg%3E");
             z-index: -1;
             pointer-events: none;
         }
 
-        /* TOMBOL MENU TOGGLE (SIMBOL HAMBURGER / CLOSE) DI POJOK */
+        /* TOMBOL MENU TOGGLE YANG LEBIH SMOOTH & ELEGAN */
         .menu-toggle {
             position: fixed;
-            top: 20px;
-            left: 20px;
-            background: var(--antique-ruby);
-            color: #fff;
-            border: none;
-            width: 45px;
-            height: 45px;
-            border-radius: 10px;
-            font-size: 1.2rem;
+            top: 25px;
+            left: 25px;
+            background: var(--bg-card);
+            color: var(--primary-green);
+            border: 2px solid var(--border-subtle);
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            font-size: 1.25rem;
             cursor: pointer;
             z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(133, 39, 54, 0.2);
-            transition: 0.3s ease;
+            box-shadow: 0 6px 20px rgba(44, 94, 59, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .menu-toggle:hover { background: var(--chinese-blue); }
+        .menu-toggle:hover {
+            background: var(--primary-green);
+            color: #fff;
+            border-color: var(--primary-green);
+            transform: scale(1.05);
+        }
 
-        /* SIDEBAR NAVIGASI KIRI */
+        /* SIDEBAR NAVIGASI KIRI DENGAN TRANSISI HALUS */
         .sidebar {
             width: var(--sidebar-width);
             height: 100vh;
@@ -82,17 +86,19 @@
             display: flex;
             flex-direction: column;
             z-index: 900;
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 5px 0 25px rgba(0,0,0,0.02);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
         }
 
-        /* Kelas untuk menyembunyikan sidebar lewat klik tombol */
+        /* Kelas untuk menyembunyikan sidebar secara mulus */
         .sidebar.hidden {
             transform: translateX(-100%);
+            opacity: 0;
         }
 
         .sidebar-profile { margin-top: 1.5rem; }
         .sidebar-profile h1 {
-            font-size: 1.4rem; font-weight: 800; color: var(--antique-ruby);
+            font-size: 1.4rem; font-weight: 800; color: var(--primary-green);
             margin-bottom: 5px; line-height: 1.2;
         }
         .sidebar-profile p { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 2rem; }
@@ -100,32 +106,34 @@
         .nav-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
         .nav-links a {
             text-decoration: none; color: var(--text-muted); font-weight: 600;
-            padding: 10px 15px; border-radius: 8px; font-size: 0.95rem;
-            transition: all 0.2s ease; border: 1px solid transparent; display: block;
+            padding: 10px 15px; border-radius: 10px; font-size: 0.95rem;
+            transition: all 0.25s ease; border: 1px solid transparent; display: block;
         }
         .nav-links a:hover {
-            background: rgba(226, 201, 158, 0.2); color: var(--antique-ruby);
-            border-color: var(--desert-sand);
+            background: var(--accent-mint); 
+            color: var(--primary-green);
+            transform: translateX(4px);
         }
 
         /* TOMBOL BAHASA DI SIDEBAR */
         .lang-switch {
             margin-top: auto; display: flex; gap: 5px;
-            background: rgba(226, 201, 158, 0.15); padding: 5px; border-radius: 20px;
+            background: var(--accent-mint); padding: 5px; border-radius: 20px;
+            border: 1px solid var(--border-subtle);
         }
         .lang-btn {
             flex: 1; border: none; background: transparent; padding: 8px; border-radius: 15px;
             font-weight: 700; color: var(--text-muted); cursor: pointer; transition: 0.2s;
         }
-        .lang-btn.active { background: var(--antique-ruby); color: #fff; }
+        .lang-btn.active { background: var(--primary-green); color: #fff; box-shadow: 0 2px 8px rgba(44,94,59,0.3); }
 
-        /* KONTEN UTAMA KANAN */
+        /* KONTEN UTAMA KANAN DENGAN TRANSISI LEBAR */
         .main-content {
             margin-left: var(--sidebar-width);
             padding: 4rem;
             max-width: 950px;
             width: 100%;
-            transition: margin-left 0.3s ease-in-out;
+            transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.4s ease;
         }
         .main-content.expanded {
             margin-left: 0;
@@ -136,8 +144,8 @@
         section { margin-bottom: 5rem; scroll-margin-top: 3rem; }
         
         h2 {
-            color: var(--antique-ruby); font-size: 1.5rem; font-weight: 800;
-            text-transform: uppercase; border-bottom: 2px solid var(--desert-sand);
+            color: var(--primary-green); font-size: 1.5rem; font-weight: 800;
+            text-transform: uppercase; border-bottom: 2px solid var(--border-subtle);
             padding-bottom: 10px; margin-bottom: 1.5rem;
         }
 
@@ -145,29 +153,35 @@
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .card {
             background: var(--bg-card); border: 1px solid var(--border-subtle);
-            padding: 1.5rem; border-radius: 12px; transition: 0.2s;
+            padding: 1.5rem; border-radius: 14px; transition: 0.3s ease;
         }
-        .card:hover { border-color: var(--pearly-purple); box-shadow: 0 5px 15px rgba(170, 116, 160, 0.1); }
-        .card h3 { color: var(--antique-ruby); font-size: 1.1rem; margin-bottom: 5px; }
+        .card:hover { 
+            border-color: var(--primary-green); 
+            box-shadow: 0 10px 25px rgba(44, 94, 59, 0.08);
+            transform: translateY(-3px);
+        }
+        .card h3 { color: var(--primary-green); font-size: 1.1rem; margin-bottom: 5px; }
         
         .tag {
-            background: rgba(170, 116, 160, 0.1); color: var(--antique-ruby);
-            padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700;
+            background: var(--accent-mint); color: var(--primary-green);
+            padding: 5px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 700;
             display: inline-block; margin: 0 5px 10px 0; border: 1px solid var(--border-subtle);
         }
 
-        a.link-out { color: var(--chinese-blue); font-weight: 600; text-decoration: none; }
-        a.link-out:hover { text-decoration: underline; }
+        a.link-out { color: #2E5B88; font-weight: 600; text-decoration: none; transition: 0.2s; }
+        a.link-out:hover { text-decoration: underline; color: var(--primary-green); }
 
         /* LIST PENDIDIKAN & SERTIFIKAT */
         .list-group { margin-bottom: 2rem; }
-        .list-group h3 { font-size: 1.1rem; color: var(--chinese-blue); margin-bottom: 10px; }
+        .list-group h3 { font-size: 1.1rem; color: #2E5B88; margin-bottom: 10px; }
         .list-item {
-            background: #fff; border-left: 3px solid var(--antique-ruby);
-            padding: 12px 15px; margin-bottom: 10px; border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            background: #fff; border-left: 3px solid var(--primary-green);
+            padding: 12px 15px; margin-bottom: 10px; border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-subtle);
+            border-left-width: 4px;
         }
-        .list-item strong { display: block; color: var(--antique-ruby); }
+        .list-item strong { display: block; color: var(--primary-green); }
 
         /* KETERANGAN / PLACEHOLDER */
         .note-box {
@@ -179,15 +193,23 @@
 
         /* CTA */
         .cta-box {
-            text-align: center; background: rgba(226, 201, 158, 0.2);
-            padding: 3rem; border-radius: 16px; border: 2px dashed var(--antique-ruby);
+            text-align: center; background: var(--accent-mint);
+            padding: 3rem; border-radius: 16px; border: 2px dashed var(--primary-green);
         }
         .btn {
-            display: inline-block; background: var(--antique-ruby); color: #fff;
-            padding: 12px 25px; border-radius: 8px; font-weight: 600;
-            text-decoration: none; margin-top: 15px; transition: 0.2s;
+            display: inline-block; background: var(--primary-green); color: #fff;
+            padding: 12px 25px; border-radius: 10px; font-weight: 600;
+            text-decoration: none; margin: 8px; transition: 0.2s;
+            box-shadow: 0 4px 12px rgba(44,94,59,0.2);
         }
-        .btn:hover { background: var(--chinese-blue); }
+        .btn:hover { background: #1E3F20; text-decoration: none; transform: translateY(-2px); }
+        .btn.linkedin {
+            background: #2E5B88;
+            box-shadow: 0 4px 12px rgba(46,91,136,0.2);
+        }
+        .btn.linkedin:hover {
+            background: var(--primary-green);
+        }
 
         /* RESPONSIVE MOBILE */
         @media (max-width: 768px) {
@@ -201,7 +223,7 @@
 </head>
 <body>
 
-    <!-- TOMBOL SIMBOL MENU (BUKA / TUTUP SIDEBAR) -->
+    <!-- TOMBOL SIMBOL MENU (BUKA / TUTUP SIDEBAR) DENGAN EFEK SMOOTH -->
     <button class="menu-toggle" id="toggle-btn" onclick="toggleSidebar()" aria-label="Toggle Menu">☰</button>
 
     <!-- SIDEBAR KIRI -->
@@ -234,9 +256,9 @@
                 SEO Content Writer &amp; Content Strategist yang berpengalaman meracik konten ramah mesin pencari, berbasis riset mendalam, dan bernilai jangka panjang (evergreen) untuk membangun otoritas brand di halaman pertama Google.
             </p>
             <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
-                <div class="tag">11+ Rank 1 Google</div>
-                <div class="tag">1+ Tahun Pengalaman</div>
-                <div class="tag">Data-Driven Writing</div>
+                <div class="tag" data-id="11+ Rank 1 Google" data-en="11+ Google Rank 1">11+ Rank 1 Google</div>
+                <div class="tag" data-id="1+ Tahun Pengalaman" data-en="1+ Years Experience">1+ Tahun Pengalaman</div>
+                <div class="tag" data-id="35+ Konten Sosmed" data-en="35+ Social Media Posts">35+ Konten Sosmed</div>
             </div>
         </section>
 
@@ -315,22 +337,22 @@
                 <h2 style="border:none; margin-bottom: 5px;" data-id="Mari Berkolaborasi" data-en="Let's Collaborate">Mari Berkolaborasi</h2>
                 <p data-id="Terbuka untuk peluang full-time di bidang penulisan dan SEO." data-en="Open to full-time opportunities in writing and SEO.">Terbuka untuk peluang full-time di bidang penulisan dan SEO.</p>
                 <a href="mailto:safirahana.r@gmail.com" class="btn" data-id="Kirim Email" data-en="Send Email">Kirim Email</a>
+                <a href="https://www.linkedin.com/" class="btn linkedin" target="_blank" data-id="Profil LinkedIn" data-en="LinkedIn Profile">Profil LinkedIn</a>
             </div>
         </section>
 
     </main>
 
     <script>
-        /* Fungsi Toggle Sidebar Buka/Tutup */
+        /* Fungsi Toggle Sidebar Buka/Tutup yang Smooth */
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const mainContent = document.getElementById('main-content');
             const toggleBtn = document.getElementById('toggle-btn');
             
             sidebar.classList.toggle('hidden');
-            mainContent.classList.expanded.toggle('expanded');
+            mainContent.classList.toggle('expanded');
             
-            // Ganti simbol tombol (☰ jadi ✕, atau sebaliknya)
             if (sidebar.classList.contains('hidden')) {
                 toggleBtn.innerHTML = '☰';
             } else {
