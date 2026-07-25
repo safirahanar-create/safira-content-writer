@@ -8,18 +8,18 @@
     
     <style>
         /* =========================================================
-           ✨ TEMA: FRESH MINT & SAGE + SIDEBAR KIRI MENETAP (SCROLLABLE)
+           ✨ TEMA: CREATIVE AGENCY (ELECTRIC INDIGO & NEON CORAL) + TOOLS
            ========================================================= */
         :root {
-            --bg-body: #F4F7F5;           
-            --bg-card: #ffffff;
-            --text-main: #1E3F20;         
-            --text-muted: #4A6B4E;        
-            --accent-mint: #E8F2EC;       
-            --border-subtle: #D0E1D4;     
-            --primary-green: #2C5E3B;     
-            --highlight-gold: #C2A649;    
-            --sidebar-width: 280px;
+            --bg-body: #0F1117;           
+            --bg-card: #1A1D26;           
+            --text-main: #F8FAFC;         
+            --text-muted: #94A3B8;        
+            --accent-glow: #2E2845;       
+            --border-subtle: #2D3748;     
+            --primary-neon: #7C3AED;      
+            --secondary-neon: #FF5722;    
+            --sidebar-width: 270px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,19 +42,19 @@
             position: fixed;
             top: 0; left: 0;
             width: 100vw; height: 100vh;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='%232C5E3B' fill-opacity='0.05'%3E%3Cpath d='M10 15h20v4H10zM35 14h15v3H35zM55 16h25v4H55zM85 13h18v3H85zM110 15h22v4H110zM15 28h18v3H15zM40 27h20v4H40zM65 29h22v3H65zM95 26h28v4H95zM10 42h25v3H10zM40 40h15v4H40zM60 43h30v3H60zM95 41h20v4H95zM15 55h20v3H15zM40 54h18v4H40zM65 56h25v3H65zM95 55h22v4H95zM10 68h22v4H10zM38 67h16v3H38zM60 69h28v4H60zM92 68h25v3H92zM12 82h26v3H12zM43 81h15v4H43zM63 83h20v3H63zM90 80h22v4H90zM15 95h20v3H15zM40 94h22v4H40zM68 96h25v3H68zM98 95h18v4H98zM10 110h22v3H10zM38 108h18v4H38zM62 111h25v3H62zM92 109h20v4H92zM15 124h25v3H15zM45 123h15v4H45zM65 125h20v3H65zM90 122h25v4H90zM12 138h22v3H12zM40 137h20v4H40zM65 139h22v3H65zM92 136h28v4H92z'/%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='%237C3AED' fill-opacity='0.04'%3E%3Cpath d='M10 15h20v4H10zM35 14h15v3H35zM55 16h25v4H55zM85 13h18v3H85zM110 15h22v4H110zM15 28h18v3H15zM40 27h20v4H40zM65 29h22v3H65zM95 26h28v4H95zM10 42h25v3H10zM40 40h15v4H40zM60 43h30v3H60zM95 41h20v4H95zM15 55h20v3H15zM40 54h18v4H40zM65 56h25v3H65zM95 55h22v4H95zM10 68h22v4H10zM38 67h16v3H38zM60 69h28v4H60zM92 68h25v3H92zM12 82h26v3H12zM43 81h15v4H43zM63 83h20v3H63zM90 80h22v4H90zM15 95h20v3H15zM40 94h22v4H40zM68 96h25v3H68zM98 95h18v4H98zM10 110h22v3H10zM38 108h18v4H38zM62 111h25v3H62zM92 109h20v4H92zM15 124h25v3H15zM45 123h15v4H45zM65 125h20v3H65zM90 122h25v4H90zM12 138h22v3H12zM40 137h20v4H40zM65 139h22v3H65zM92 136h28v4H92z'/%3E%3C/g%3E%3C/svg%3E");
             z-index: -1;
             pointer-events: none;
         }
 
-        /* TOMBOL MENU TOGGLE (HANYA MUNCUL DI MOBILE) */
+        /* TOMBOL MENU TOGGLE DI POJOK (HANYA MUNCUL DI MOBILE) */
         .menu-toggle {
             display: none;
             position: fixed;
             top: 20px;
             left: 20px;
             background: var(--bg-card);
-            color: var(--primary-green);
+            color: var(--secondary-neon);
             border: 2px solid var(--border-subtle);
             width: 45px;
             height: 45px;
@@ -62,11 +62,11 @@
             font-size: 1.25rem;
             cursor: pointer;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(44, 94, 59, 0.1);
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
             transition: 0.3s;
         }
 
-        /* SIDEBAR KIRI (MENETAP / FIXED) */
+        /* SIDEBAR KIRI */
         .sidebar {
             width: var(--sidebar-width);
             height: 100vh;
@@ -78,92 +78,118 @@
             display: flex;
             flex-direction: column;
             z-index: 900;
-            box-shadow: 5px 0 25px rgba(74, 59, 50, 0.04);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar.hidden {
+            transform: translateX(-100%);
         }
 
         /* TOMBOL BAHASA DI SIDEBAR (PALING ATAS) */
         .lang-switch {
-            margin-bottom: 2.5rem; 
+            margin-bottom: 2rem; 
             display: flex; gap: 5px;
-            background: var(--accent-mint); padding: 5px; border-radius: 20px;
+            background: var(--accent-glow); padding: 5px; border-radius: 20px;
             border: 1px solid var(--border-subtle);
         }
         .lang-btn {
             flex: 1; border: none; background: transparent; padding: 8px; border-radius: 15px;
             font-weight: 700; color: var(--text-muted); cursor: pointer; transition: 0.2s;
         }
-        .lang-btn.active { background: var(--primary-green); color: #fff; box-shadow: 0 2px 8px rgba(44,94,59,0.3); }
+        .lang-btn.active { background: var(--secondary-neon); color: #fff; box-shadow: 0 2px 10px rgba(255, 87, 34, 0.4); }
 
         .sidebar-profile h2 {
-            font-size: 1.3rem; font-weight: 800; color: var(--primary-green);
+            font-size: 1.3rem; font-weight: 800; color: var(--text-main);
             margin-bottom: 5px; line-height: 1.2;
         }
-        .sidebar-profile p { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 2rem; }
+        .sidebar-profile p { font-size: 0.85rem; font-weight: 600; color: var(--secondary-neon); margin-bottom: 2rem; }
 
-        .nav-links { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: auto;}
+        .nav-links { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: auto;}
         .nav-links a {
             text-decoration: none; color: var(--text-muted); font-weight: 600;
-            padding: 12px 15px; border-radius: 10px; font-size: 0.95rem;
-            transition: all 0.25s ease; border: 1px solid transparent; display: block;
+            padding: 10px 14px; border-radius: 10px; font-size: 0.95rem;
+            transition: all 0.25s ease; border: 1px solid transparent; display: flex; align-items: center; gap: 12px;
         }
         .nav-links a:hover {
-            background: var(--accent-mint); 
-            color: var(--primary-green);
+            background: var(--accent-glow); 
+            color: var(--secondary-neon);
             transform: translateX(4px);
         }
+        
+        .nav-icon {
+            font-size: 1.1rem;
+            width: 24px;
+            text-align: center;
+        }
 
-        /* KONTEN UTAMA KANAN (BISA DISCROLL) */
+        /* KONTEN UTAMA KANAN */
         .main-content {
             margin-left: var(--sidebar-width);
-            padding: 5rem 4rem;
+            padding: 4rem;
             max-width: 1050px;
             width: 100%;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .main-content.expanded {
+            margin-left: 0;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         /* HERO SECTION */
         .hero-section { margin-bottom: 5rem; scroll-margin-top: 3rem; }
         .hero-section h1 {
-            font-size: 3.8rem; font-weight: 900; color: var(--primary-green);
+            font-size: 3.8rem; font-weight: 900; 
+            background: linear-gradient(135deg, #F8FAFC 0%, var(--secondary-neon) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             line-height: 1.1; margin-bottom: 5px; letter-spacing: -1px;
         }
         .location-info {
-            font-size: 1.1rem; font-weight: 700; color: var(--primary-green);
+            font-size: 1.1rem; font-weight: 700; color: var(--secondary-neon);
             margin-bottom: 15px; display: flex; align-items: center; gap: 5px;
         }
         .live-status {
             display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(194, 166, 73, 0.15); border: 1px solid var(--highlight-gold);
+            background: rgba(124, 58, 237, 0.15); border: 1px solid var(--primary-neon);
             padding: 8px 16px; border-radius: 30px; font-size: 0.9rem;
-            font-weight: 700; color: var(--text-main); margin-bottom: 1.8rem;
+            font-weight: 700; color: #E2E8F0; margin-bottom: 1.8rem;
         }
         .pulse-dot {
-            width: 10px; height: 10px; background-color: #10B981; border-radius: 50%;
-            box-shadow: 0 0 0 rgba(16, 185, 129, 0.4); animation: pulse 2s infinite;
+            width: 10px; height: 10px; background-color: var(--secondary-neon); border-radius: 50%;
+            box-shadow: 0 0 10px var(--secondary-neon); animation: pulse 2s infinite;
         }
         @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(255, 87, 34, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 87, 34, 0); }
         }
 
         section { margin-bottom: 5rem; scroll-margin-top: 3rem; }
         
         h2 {
-            color: var(--primary-green); font-size: 1.8rem; font-weight: 800;
+            color: var(--text-main); font-size: 1.8rem; font-weight: 800;
             border-bottom: 2px solid var(--border-subtle);
-            padding-bottom: 10px; margin-bottom: 1.5rem;
+            padding-bottom: 10px; margin-bottom: 1.5rem; position: relative;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -2px;
+            width: 80px; height: 2px;
+            background-color: var(--secondary-neon);
         }
 
         /* TRAITS LIST (PRINSIP KERJA) */
         .traits-list { list-style: none; display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
         .traits-list li {
-            background: #fff; border: 1px solid var(--border-subtle);
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
             padding: 10px 18px; border-radius: 10px; font-size: 0.95rem;
-            color: var(--primary-green); font-weight: 600; box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            color: #E2E8F0; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: 0.2s;
         }
-        .traits-list li:hover { border-color: var(--primary-green); transform: translateY(-2px); }
+        .traits-list li:hover { border-color: var(--secondary-neon); transform: translateY(-2px); color: var(--secondary-neon); }
 
         /* GRID PORTFOLIO */
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -171,63 +197,62 @@
             background: var(--bg-card); border: 1px solid var(--border-subtle);
             padding: 1.5rem; border-radius: 14px; transition: 0.3s ease;
         }
-        .card:hover { border-color: var(--primary-green); box-shadow: 0 10px 25px rgba(44, 94, 59, 0.08); transform: translateY(-3px); }
-        .card h3 { color: var(--primary-green); font-size: 1.1rem; margin-bottom: 5px; }
+        .card:hover { border-color: var(--secondary-neon); box-shadow: 0 10px 30px rgba(255, 87, 34, 0.1); transform: translateY(-3px); }
+        .card h3 { color: var(--text-main); font-size: 1.1rem; margin-bottom: 5px; }
         
         .tag {
-            background: var(--accent-mint); color: var(--primary-green);
+            background: var(--accent-glow); color: var(--secondary-neon);
             padding: 5px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 700;
             display: inline-block; margin: 0 5px 10px 0; border: 1px solid var(--border-subtle);
         }
 
-        a.link-out { color: #2E5B88; font-weight: 600; text-decoration: none; transition: 0.2s; }
-        a.link-out:hover { text-decoration: underline; color: var(--primary-green); }
+        a.link-out { color: #60A5FA; font-weight: 600; text-decoration: none; transition: 0.2s; }
+        a.link-out:hover { text-decoration: underline; color: var(--secondary-neon); }
 
         /* LIST PENDIDIKAN & SERTIFIKAT */
         .list-group { margin-bottom: 2rem; }
-        .list-group h3 { font-size: 1.1rem; color: #2E5B88; margin-bottom: 10px; }
+        .list-group h3 { font-size: 1.1rem; color: #60A5FA; margin-bottom: 10px; }
         .list-item {
-            background: #fff; border-left: 4px solid var(--primary-green);
+            background: var(--bg-card); border-left: 4px solid var(--secondary-neon);
             padding: 15px; margin-bottom: 12px; border-radius: 0 10px 10px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02); border: 1px solid var(--border-subtle);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); border-top: 1px solid var(--border-subtle); border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
         }
-        .list-item strong { display: block; color: var(--primary-green); font-size: 1.05rem; }
+        .list-item strong { display: block; color: var(--text-main); font-size: 1.05rem; }
 
         /* KETERANGAN */
-        .note-box { font-size: 0.9rem; color: var(--text-muted); margin-top: 15px; padding: 10px 15px; background-color: var(--accent-mint); border-radius: 8px; border-left: 3px solid var(--primary-green); }
+        .note-box { font-size: 0.9rem; color: var(--text-muted); margin-top: 15px; padding: 10px 15px; background-color: var(--accent-glow); border-radius: 8px; border-left: 3px solid var(--secondary-neon); }
 
         /* CTA */
         .cta-box {
-            text-align: center; background: var(--accent-mint);
-            padding: 3rem; border-radius: 16px; border: 2px dashed var(--primary-green);
+            text-align: center; background: var(--bg-card);
+            padding: 3rem; border-radius: 16px; border: 2px dashed var(--secondary-neon);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         .btn {
-            display: inline-block; background: var(--primary-green); color: #fff;
+            display: inline-block; background: var(--secondary-neon); color: #fff;
             padding: 12px 25px; border-radius: 10px; font-weight: 600;
-            text-decoration: none; margin: 8px; transition: 0.2s; box-shadow: 0 4px 12px rgba(44,94,59,0.2);
+            text-decoration: none; margin: 8px; transition: 0.2s; box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
             border: 1px solid transparent;
         }
-        .btn:hover { background: #1E3F20; text-decoration: none; transform: translateY(-2px); }
-        .btn.linkedin { background: #2E5B88; box-shadow: 0 4px 12px rgba(46,91,136,0.2); }
-        .btn.linkedin:hover { background: var(--primary-green); }
+        .btn:hover { background: #E64A19; text-decoration: none; transform: translateY(-2px); }
+        .btn.linkedin { background: var(--primary-neon); box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4); }
+        .btn.linkedin:hover { background: #6D28D9; }
 
         /* RESPONSIVE MOBILE */
         @media (max-width: 768px) {
             .menu-toggle { display: flex; }
             .sidebar { width: 100%; height: auto; position: fixed; padding-top: 5rem; }
-            .sidebar.hidden { transform: translateX(-100%); }
-            .main-content { margin-left: 0; padding: 6rem 1.5rem 2rem 1.5rem; }
-            .hero-section h1 { font-size: 2.5rem; }
+            .main-content, .main-content.expanded { margin-left: 0; padding: 6rem 1.5rem 2rem 1.5rem; }
             .grid-2 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOMBOL MENU KHUSUS MOBILE -->
-    <button class="menu-toggle" id="toggle-btn" onclick="toggleSidebarMobile()" aria-label="Toggle Menu">☰</button>
+    <!-- TOMBOL MENU DI POJOK -->
+    <button class="menu-toggle" id="toggle-btn" onclick="toggleSidebar()" aria-label="Toggle Menu">☰</button>
 
-    <!-- SIDEBAR KIRI (MENETAP / FIXED) -->
+    <!-- SIDEBAR KIRI -->
     <nav class="sidebar" id="sidebar">
         <div class="lang-switch">
             <button class="lang-btn active" id="btn-id" onclick="setLanguage('id')">ID</button>
@@ -240,16 +265,17 @@
         </div>
         
         <ul class="nav-links">
-            <li><a href="#hero" data-id="Profil" data-en="Profile">Profil</a></li>
-            <li><a href="#seo" data-id="Pencapaian SEO" data-en="SEO Achievements">Pencapaian SEO</a></li>
-            <li><a href="#portfolio" data-id="Portofolio Web" data-en="Web Portfolio">Portofolio Web</a></li>
-            <li><a href="#education" data-id="Pendidikan & Sertifikasi" data-en="Education & Certs">Pendidikan & Sertifikasi</a></li>
-            <li><a href="#contact" data-id="Kontak" data-en="Contact">Kontak</a></li>
+            <li><a href="#hero"><span class="nav-icon">✦</span> <span data-id="Profil" data-en="Profile">Profil</span></a></li>
+            <li><a href="#seo"><span class="nav-icon">📈</span> <span data-id="Pencapaian SEO" data-en="SEO Achievements">Pencapaian SEO</span></a></li>
+            <li><a href="#portfolio"><span class="nav-icon">💼</span> <span data-id="Portofolio Web" data-en="Web Portfolio">Portofolio Web</span></a></li>
+            <li><a href="#tools"><span class="nav-icon">🛠️</span> <span data-id="Tools & Keahlian" data-en="Tools & Skills">Tools & Keahlian</span></a></li>
+            <li><a href="#education"><span class="nav-icon">🎓</span> <span data-id="Pendidikan & Sertifikasi" data-en="Education & Certs">Pendidikan & Sertifikasi</span></a></li>
+            <li><a href="#contact"><span class="nav-icon">📬</span> <span data-id="Kontak" data-en="Contact">Kontak</span></a></li>
         </ul>
     </nav>
 
-    <!-- KONTEN UTAMA KANAN (SCROLLABLE) -->
-    <main class="main-content">
+    <!-- KONTEN UTAMA KANAN -->
+    <main class="main-content" id="main-content">
         
         <!-- HERO SECTION -->
         <div class="hero-section" id="hero">
@@ -265,9 +291,9 @@
                 "Nggak obral janji pasti rank satu, tapi siap meracik tulisan yang relevan, awet dibaca, dan pastinya ramah SEO."
             </p>
             <div style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
-                <div class="tag" data-id="11+ Rank 1 Google" data-en="11+ Google Rank 1">11+ Rank 1 Google</div>
-                <div class="tag" data-id="1+ Tahun Pengalaman" data-en="1+ Years Experience">1+ Years Experience</div>
-                <div class="tag" data-id="35+ Konten Sosmed" data-en="35+ Social Media Posts">35+ Konten Sosmed</div>
+                <div class="tag" data-id="11+ Rank 1 Google" data-en="11+ Google Rank 1">11+ Rank 1 Google[span_0](start_span)[span_0](end_span)</div>
+                <div class="tag" data-id="1+ Tahun Pengalaman" data-en="1+ Years Experience">1+ Tahun Pengalaman[span_1](start_span)[span_1](end_span)</div>
+                <div class="tag" data-id="35+ Konten Sosmed" data-en="35+ Social Media Posts">35+ Konten Sosmed[span_2](start_span)[span_2](end_span)</div>
             </div>
         </div>
 
@@ -304,34 +330,51 @@
             </p>
         </section>
 
-        <!-- PORTFOLIO -->
+        <!-- PORTFOLIO (GNFI PALING ATAS, CAMPUSNET PALING BAWAH) -->
         <section id="portfolio">
             <h2 data-id="Portofolio Web" data-en="Web Portfolio">Portofolio Web</h2>
             <div class="grid-2">
+                <!-- 1. GNFI (PALING ATAS) -->
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3>Good News From Indonesia</h3>
+                    <span class="tag">Sosbud & Wisata</span> <span class="tag">Evergreen</span>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-id="Meracik artikel evergreen seputar sosial budaya dan sejarah." data-en="Crafting evergreen articles on culture and history.">Meracik artikel evergreen seputar sosial budaya dan sejarah.</p>
+                    <a href="https://www.goodnewsfromindonesia.id/u/safirhn1" class="link-out" target="_blank">Author Page &rarr;</a>
+                </div>
+                <!-- 2. SEKAWAN MEDIA -->
                 <div class="card">
                     <h3>Sekawan Media</h3>
                     <span class="tag">B2B Tech</span> <span class="tag">Software</span>
-                    <p style="font-size: 0.9rem;" data-id="Membahas topik teknis seputar website dan software menjadi artikel edukatif." data-en="Translating technical software topics into educational articles.">Membahas topik teknis seputar website dan software menjadi artikel edukatif.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-id="Membahas topik teknis seputar website dan software menjadi artikel edukatif." data-en="Translating technical software topics into educational articles.">Membahas topik teknis seputar website dan software menjadi artikel edukatif.</p>
                     <a href="https://www.sekawanmedia.co.id/author/safira_content_intern_skwn2026/" class="link-out" target="_blank">Author Page &rarr;</a>
                 </div>
+                <!-- 3. SITESPIRIT -->
                 <div class="card">
                     <h3>SiteSpirit</h3>
                     <span class="tag">Tech & Website</span> <span class="tag">SEO Content</span>
-                    <p style="font-size: 0.9rem;" data-id="Menyusun rubrik artikel informatif terkait industri teknologi." data-en="Developing informative rubrics regarding the tech industry.">Menyusun rubrik artikel informatif terkait industri teknologi.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-id="Menyusun rubrik artikel informatif terkait industri teknologi." data-en="Developing informative rubrics regarding the tech industry.">Menyusun rubrik artikel informatif terkait industri teknologi.</p>
                     <a href="https://sitespirit.co/author/safira_content_intern26/" class="link-out" target="_blank">Author Page &rarr;</a>
                 </div>
-                <!-- CAMPUSNET TANPA TOMBOL KUNJUNGI WEBSITE -->
-                <div class="card">
+                <!-- 4. CAMPUSNET (PALING BAWAH) -->
+                <div class="card" style="grid-column: 1 / -1;">
                     <h3>CampusNet</h3>
                     <span class="tag">Social Media</span> <span class="tag">Edukasi</span>
-                    <p style="font-size: 0.9rem;" data-id="Merancang konten carousel Instagram edukatif seputar tips mahasiswa, organisasi akademik, dan rekomendasi buku metodologi riset." data-en="Designing educational Instagram carousel content about student tips, academic organizations, and research methodology book recommendations.">Merancang konten carousel Instagram edukatif seputar tips mahasiswa, organisasi akademik, dan rekomendasi buku metodologi riset.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-id="Meracik konten carousel Instagram edukatif seputar tips mahasiswa, organisasi akademik, dan rekomendasi buku metodologi riset." data-en="Designing educational Instagram carousel content about student tips, academic organizations, and research methodology book recommendations.">Merancang konten carousel Instagram edukatif seputar tips mahasiswa, organisasi akademik, dan rekomendasi buku metodologi riset[span_3](start_span)[span_3](end_span).</p>
                 </div>
-                <div class="card">
-                    <h3>Good News From Indonesia</h3>
-                    <span class="tag">Sosbud & Wisata</span> <span class="tag">Evergreen</span>
-                    <p style="font-size: 0.9rem;" data-id="Meracik artikel evergreen seputar sosial budaya dan sejarah." data-en="Crafting evergreen articles on culture and history.">Meracik artikel evergreen seputar sosial budaya dan sejarah.</p>
-                    <a href="https://www.goodnewsfromindonesia.id/u/safirhn1" class="link-out" target="_blank">Author Page &rarr;</a>
-                </div>
+            </div>
+        </section>
+
+        <!-- TOOLS & KEAHLIAN -->
+        <section id="tools">
+            <h2 data-id="Tools & Keahlian SEO" data-en="Tools & SEO Skills">Tools & Keahlian SEO</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;" data-id="Perangkat dan platform yang biasa digunakan untuk riset, analisis, dan produksi konten:" data-en="Tools and platforms commonly used for research, analysis, and content production:">Perangkat dan platform yang biasa digunakan untuk riset, analisis, dan produksi konten:</p>
+            <div class="traits-list">
+                <li>📊 Google Search Console</li>
+                <li>📈 Google Trends</li>
+                <li>🔍 Ahrefs & SEMrush</li>
+                <li>💡 Ubersuggest</li>
+                <li>📝 Google Workspace & Notion</li>
+                <li>✍️ Grammarly & AI Assistant</li>
             </div>
         </section>
 
@@ -359,7 +402,7 @@
                 </div>
                 <div class="list-item">
                     <strong>Wikilatih Daring</strong>
-                    <span style="font-size: 0.9rem; color: var(--text-muted);" data-id="Menulis artikel berbasis ensiklopedis dengan kaidah bahasa Indonesia baku." data-en="Writing encyclopedia-based articles with standard Indonesian rules.">Menulis artikel berbasis ensiklopedis dengan kaidah bahasa Indonesia baku.</span>
+                    <span style="font-size: 0.9rem; color: var(--text-muted);" data-id="Menulis artikel berbasis ensiklopedis dengan kaidah bahasa Indonesia baku." data-en="Writing encyclopedia-based articles with standard Indonesian rules.">Writing encyclopedia-based articles with standard Indonesian rules.</span>
                 </div>
             </div>
         </section>
@@ -377,11 +420,13 @@
     </main>
 
     <script>
-        function toggleSidebarMobile() {
+        function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('main-content');
             const toggleBtn = document.getElementById('toggle-btn');
             
             sidebar.classList.toggle('hidden');
+            mainContent.classList.toggle('expanded');
             
             if (sidebar.classList.contains('hidden')) {
                 toggleBtn.innerHTML = '☰';
@@ -407,5 +452,4 @@
     </script>
 </body>
 </html>
-
 
