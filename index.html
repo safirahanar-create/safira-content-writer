@@ -3,412 +3,648 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portofolio Safira Hana R. - SEO Content Writer">
-    <title>Safira Hana R. | Portfolio</title>
+    <meta name="description" content="Portfolio of Safira Hana R. - Enterprise SEO Content Writer">
+    <title>Safira Hana R. | Enterprise Portfolio</title>
     
     <style>
         /* =========================================================
-           ✨ TEMA: CREATIVE AGENCY (ELECTRIC INDIGO & NEON CORAL)
+           ✨ DESIGN SYSTEM: EXECUTIVE TECH & FLUID AESTHETICS
            ========================================================= */
         :root {
-            --bg-body: #0F1117;           
-            --bg-card: #1A1D26;           
-            --text-main: #F8FAFC;         
-            --text-muted: #94A3B8;        
-            --accent-glow: #2E2845;       
-            --border-subtle: #2D3748;     
-            --primary-neon: #7C3AED;      
-            --secondary-neon: #FF5722;    
+            --bg-primary: #090B10;
+            --bg-surface: #121620;
+            --bg-glass: rgba(18, 22, 32, 0.75);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --text-main: #F3F4F6;
+            --text-muted: #9CA3AF;
+            --accent-primary: #6366F1;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --accent-coral: #F43F5E;
             --sidebar-width: 220px;
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-body);
+            background-color: var(--bg-primary);
             color: var(--text-main);
             display: flex;
-            line-height: 1.7;
-            position: relative;
+            min-height: 100vh;
+            line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
         }
 
-        /* 🌌 BACKGROUND AESTHETIC GRADIENT GLOWS */
+        /* 🌌 DYNAMIC AMBIENT BACKDROP */
         body::before {
             content: "";
             position: fixed;
-            top: -20vh; left: -20vw;
-            width: 70vw; height: 70vw;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, rgba(15, 17, 23, 0) 70%);
+            top: -20%;
+            left: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
             z-index: -2;
             pointer-events: none;
+            filter: blur(60px);
         }
 
         body::after {
             content: "";
             position: fixed;
-            bottom: -20vh; right: -20vw;
-            width: 70vw; height: 70vw;
-            background: radial-gradient(circle, rgba(255, 87, 34, 0.08) 0%, rgba(15, 17, 23, 0) 70%);
+            bottom: -20%;
+            right: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(244, 63, 94, 0.05) 0%, transparent 70%);
             z-index: -2;
             pointer-events: none;
+            filter: blur(60px);
         }
 
-        /* SIDEBAR KIRI (SUPER RAMPING & MENETAP DI DESKTOP) */
+        /* =========================================================
+           SIDEBAR ARCHITECTURE (SUPER RAMPING & TETAP DI KIRI)
+           ========================================================= */
         .sidebar {
             width: var(--sidebar-width);
             height: 100vh;
-            background: var(--bg-card);
-            border-right: 1px solid var(--border-subtle);
+            background: var(--bg-surface);
+            border-right: 1px solid var(--border-glass);
             position: fixed;
-            top: 0; left: 0;
-            padding: 2.5rem 1rem 2rem 1rem;
+            top: 0;
+            left: 0;
+            padding: 2rem 1rem;
             display: flex;
             flex-direction: column;
-            z-index: 900;
-            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            backdrop-filter: blur(12px);
         }
 
-        /* TOMBOL BAHASA DI SIDEBAR */
         .lang-switch {
-            margin-bottom: 1.5rem; 
-            display: flex; gap: 4px;
-            background: var(--accent-glow); padding: 3px; border-radius: 16px;
-            border: 1px solid var(--border-subtle);
+            display: flex;
+            gap: 4px;
+            background: var(--bg-primary);
+            padding: 3px;
+            border-radius: 10px;
+            border: 1px solid var(--border-glass);
+            margin-bottom: 1.5rem;
         }
-        .lang-btn {
-            flex: 1; border: none; background: transparent; padding: 5px; border-radius: 12px;
-            font-weight: 700; color: var(--text-muted); cursor: pointer; transition: 0.2s; font-size: 0.8rem;
-        }
-        .lang-btn.active { background: var(--secondary-neon); color: #fff; box-shadow: 0 2px 10px rgba(255, 87, 34, 0.4); }
 
-        .sidebar-profile {
+        .lang-btn {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 5px;
+            border-radius: 7px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            letter-spacing: 0.05em;
+        }
+
+        .lang-btn.active {
+            background: var(--accent-primary);
+            color: #FFFFFF;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .sidebar-brand {
             padding-bottom: 1.2rem;
-            border-bottom: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-glass);
             margin-bottom: 1.2rem;
         }
-        .sidebar-profile h2 {
-            font-size: 1.05rem; font-weight: 800; color: var(--text-main);
-            margin-bottom: 3px; line-height: 1.2;
-        }
-        .sidebar-profile p { font-size: 0.75rem; font-weight: 600; color: var(--secondary-neon); }
 
-        .nav-links { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: auto;}
-        .nav-links a {
-            text-decoration: none; color: var(--text-muted); font-weight: 600;
-            padding: 8px 10px; border-radius: 8px; font-size: 0.85rem;
-            transition: all 0.25s ease; border: 1px solid transparent; display: flex; align-items: center; gap: 8px;
+        .sidebar-brand h1 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.01em;
+            margin-bottom: 3px;
         }
-        .nav-links a:hover, .nav-links a.active {
-            background: var(--accent-glow); 
-            color: var(--secondary-neon);
+
+        .sidebar-brand p {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--accent-coral);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .nav-navigation {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: auto;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.8rem;
+            padding: 8px 10px;
+            border-radius: 8px;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid transparent;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: var(--accent-glow);
+            color: var(--text-main);
+            border-color: rgba(99, 102, 241, 0.2);
             transform: translateX(3px);
         }
-        
+
         .nav-icon {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             width: 18px;
             text-align: center;
         }
 
-        /* KONTEN UTAMA KANAN */
-        .main-content {
+        /* =========================================================
+           MAIN CONTAINER INTERFACE
+           ========================================================= */
+        .main-container {
             margin-left: var(--sidebar-width);
-            padding: 4rem;
-            max-width: 1050px;
-            width: 100%;
+            padding: 4rem 5rem;
+            max-width: 1200px;
+            width: calc(100% - var(--sidebar-width));
         }
 
-        /* HERO SECTION */
-        .hero-section { margin-bottom: 5rem; scroll-margin-top: 3rem; }
-        .hero-section h1 {
-            font-size: 3.8rem; font-weight: 900; 
-            background: linear-gradient(135deg, #F8FAFC 0%, var(--secondary-neon) 100%);
+        .hero-section {
+            margin-bottom: 6rem;
+            scroll-margin-top: 4rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #FFFFFF 30%, var(--text-muted) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1.1; margin-bottom: 5px; letter-spacing: -1px;
-        }
-        .location-info {
-            font-size: 1.1rem; font-weight: 700; color: var(--secondary-neon);
-            margin-bottom: 15px; display: flex; align-items: center; gap: 5px;
-        }
-        .live-status {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(124, 58, 237, 0.15); border: 1px solid var(--primary-neon);
-            padding: 8px 16px; border-radius: 30px; font-size: 0.9rem;
-            font-weight: 700; color: #E2E8F0; margin-bottom: 1.8rem;
-        }
-        .pulse-dot {
-            width: 10px; height: 10px; background-color: var(--secondary-neon); border-radius: 50%;
-            box-shadow: 0 0 10px var(--secondary-neon); animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(255, 87, 34, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 87, 34, 0); }
+            line-height: 1.15;
+            margin-bottom: 1rem;
         }
 
-        section { margin-bottom: 5rem; scroll-margin-top: 3rem; }
-        
-        h2 {
-            color: var(--text-main); font-size: 1.8rem; font-weight: 800;
-            border-bottom: 2px solid var(--border-subtle);
-            padding-bottom: 10px; margin-bottom: 1.5rem; position: relative;
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #A5B4FC;
+            margin-bottom: 2rem;
         }
-        h2::after {
+
+        .pulse-indicator {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-coral);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-coral);
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            70% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 15px rgba(244, 63, 94, 0.6); }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+
+        section {
+            margin-bottom: 6rem;
+            scroll-margin-top: 4rem;
+        }
+
+        .section-heading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-heading::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-glass);
+        }
+
+        /* METRICS CHIPS */
+        .metrics-grid {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .metric-chip {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: var(--transition-smooth);
+        }
+
+        .metric-chip:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+            color: #818CF8;
+        }
+
+        /* CARDS ARCHITECTURE */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .card-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-container:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-container.span-full {
+            grid-column: 1 / -1;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .tag-pill {
+            background: var(--bg-primary);
+            color: var(--accent-coral);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-right: 6px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-glass);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .external-link {
+            color: #818CF8;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .external-link:hover {
+            color: #C7D2FE;
+            transform: translateX(4px);
+        }
+
+        /* LIST & TIMELINE STRUCTURE */
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .list-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-left: 3px solid var(--accent-primary);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            transition: var(--transition-smooth);
+        }
+
+        .list-box:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            border-left-color: var(--accent-coral);
+        }
+
+        .list-box strong {
+            display: block;
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .info-callout {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-left: 3px solid var(--accent-primary);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1.5rem;
+        }
+
+        /* CTA CONTAINER */
+        .cta-box {
+            text-align: center;
+            background: var(--bg-surface);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::before {
             content: '';
             position: absolute;
-            left: 0; bottom: -2px;
-            width: 80px; height: 2px;
-            background-color: var(--secondary-neon);
+            top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
         }
 
-        /* TRAITS LIST */
-        .traits-list { list-style: none; display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
-        .traits-list li {
-            background: var(--bg-card); border: 1px solid var(--border-subtle);
-            padding: 10px 18px; border-radius: 10px; font-size: 0.95rem;
-            color: #E2E8F0; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: 0.2s;
-        }
-        .traits-list li:hover { border-color: var(--secondary-neon); transform: translateY(-2px); color: var(--secondary-neon); }
-
-        /* GRID PORTFOLIO */
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .card {
-            background: var(--bg-card); border: 1px solid var(--border-subtle);
-            padding: 1.5rem; border-radius: 14px; transition: 0.3s ease;
-        }
-        .card:hover { border-color: var(--secondary-neon); box-shadow: 0 10px 30px rgba(255, 87, 34, 0.1); transform: translateY(-3px); }
-        .card h3 { color: var(--text-main); font-size: 1.1rem; margin-bottom: 5px; }
-        
-        .tag {
-            background: var(--accent-glow); color: var(--secondary-neon);
-            padding: 5px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 700;
-            display: inline-block; margin: 0 5px 10px 0; border: 1px solid var(--border-subtle);
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 2rem;
         }
 
-        a.link-out { color: #60A5FA; font-weight: 600; text-decoration: none; transition: 0.2s; display: inline-block; margin-top: 10px; }
-        a.link-out:hover { text-decoration: underline; color: var(--secondary-neon); }
-
-        /* LIST PENDIDIKAN & SERTIFIKAT */
-        .list-group { margin-bottom: 2rem; }
-        .list-group h3 { font-size: 1.1rem; color: #60A5FA; margin-bottom: 10px; }
-        .list-item {
-            background: var(--bg-card); border-left: 4px solid var(--secondary-neon);
-            padding: 15px; margin-bottom: 12px; border-radius: 0 10px 10px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); border-top: 1px solid var(--border-subtle); border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
-        }
-        .list-item strong { display: block; color: var(--text-main); font-size: 1.05rem; }
-
-        /* KETERANGAN */
-        .note-box { font-size: 0.9rem; color: var(--text-muted); margin-top: 15px; padding: 12px 16px; background-color: var(--accent-glow); border-radius: 8px; border-left: 3px solid var(--secondary-neon); line-height: 1.6; }
-
-        /* CTA */
-        .cta-box {
-            text-align: center; background: var(--bg-card);
-            padding: 3rem; border-radius: 16px; border: 2px dashed var(--secondary-neon);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        .btn {
-            display: inline-block; background: var(--secondary-neon); color: #fff;
-            padding: 12px 25px; border-radius: 10px; font-weight: 600;
-            text-decoration: none; margin: 8px; transition: 0.2s; box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        .btn-action {
+            background: var(--accent-primary);
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
             border: 1px solid transparent;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
         }
-        .btn:hover { background: #E64A19; text-decoration: none; transform: translateY(-2px); }
-        .btn.linkedin { background: var(--primary-neon); box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4); }
-        .btn.linkedin:hover { background: #6D28D9; }
 
-        /* RESPONSIVE MOBILE */
-        @media (max-width: 768px) {
-            .sidebar { 
-                width: 100%; 
-                height: auto; 
-                position: relative; 
-                box-shadow: none;
+        .btn-action:hover {
+            background: #4F46E5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-action.secondary {
+            background: var(--bg-primary);
+            border-color: var(--border-glass);
+            color: var(--text-main);
+            box-shadow: none;
+        }
+
+        .btn-action.secondary:hover {
+            background: var(--bg-surface);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        /* RESPONSIVE LAYOUT (MOBILE) */
+        @media (max-width: 900px) {
+            body { flex-direction: column; }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
                 border-right: none;
-                border-bottom: 1px solid var(--border-subtle);
-                padding: 1.5rem 1rem;
+                border-bottom: 1px solid var(--border-glass);
+                padding: 1.5rem;
             }
-            body {
-                flex-direction: column;
+            .main-container {
+                margin-left: 0;
+                width: 100%;
+                padding: 2.5rem 1.5rem;
             }
-            .main-content {
-                margin-left: 0; 
-                padding: 2rem 1.5rem; 
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- SIDEBAR KIRI (MENETAP DI SISI KIRI TANPA BUKA-TUTUP) -->
-    <nav class="sidebar" id="sidebar">
+    <!-- EXECUTIVE SIDEBAR -->
+    <nav class="sidebar">
         <div class="lang-switch">
             <button class="lang-btn active" id="btn-id" onclick="setLanguage('id')">ID</button>
             <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
         </div>
 
-        <div class="sidebar-profile">
-            <h2>Safira Hana R.</h2>
-            <p data-id="SEO Content Writer" data-en="SEO Content Writer">SEO Content Writer</p>
+        <div class="sidebar-brand">
+            <h1>Safira Hana R.</h1>
+            <p data-id="SEO Content Specialist" data-en="SEO Content Specialist">SEO Content Specialist</p>
         </div>
         
-        <ul class="nav-links">
-            <li><a href="#hero" class="nav-item active"><span class="nav-icon">✦</span> <span data-id="Profil" data-en="Profile">Profil</span></a></li>
-            <li><a href="#seo" class="nav-item"><span class="nav-icon">📈</span> <span data-id="Pencapaian SEO" data-en="SEO Achievements">Pencapaian SEO</span></a></li>
-            <li><a href="#portfolio" class="nav-item"><span class="nav-icon">💼</span> <span data-id="Portofolio Web" data-en="Web Portfolio">Portofolio Web</span></a></li>
-            <li><a href="#tools" class="nav-item"><span class="nav-icon">🛠️</span> <span data-id="Tools & Keahlian" data-en="Tools & Skills">Tools & Keahlian</span></a></li>
-            <li><a href="#education" class="nav-item"><span class="nav-icon">🎓</span> <span data-id="Pendidikan & Sertifikasi" data-en="Education & Certs">Pendidikan & Sertifikasi</span></a></li>
-            <li><a href="#contact" class="nav-item"><span class="nav-icon">📬</span> <span data-id="Kontak" data-en="Contact">Kontak</span></a></li>
+        <ul class="nav-navigation">
+            <li><a href="#hero" class="nav-item active"><span class="nav-icon">⚡</span> <span data-id="Overview" data-en="Overview">Overview</span></a></li>
+            <li><a href="#philosophy" class="nav-item"><span class="nav-icon">💡</span> <span data-id="Prinsip Kerja" data-en="Work Principles">Prinsip Kerja</span></a></li>
+            <li><a href="#seo" class="nav-item"><span class="nav-icon">📊</span> <span data-id="SEO Performance" data-en="SEO Performance">SEO Performance</span></a></li>
+            <li><a href="#portfolio" class="nav-item"><span class="nav-icon">📁</span> <span data-id="Portfolio" data-en="Portfolio">Portfolio</span></a></li>
+            <li><a href="#stack" class="nav-item"><span class="nav-icon">🛠️</span> <span data-id="Tech Stack" data-en="Tech Stack">Tech Stack</span></a></li>
+            <li><a href="#credentials" class="nav-item"><span class="nav-icon">🎓</span> <span data-id="Credentials" data-en="Credentials">Credentials</span></a></li>
+            <li><a href="#contact" class="nav-item"><span class="nav-icon">📬</span> <span data-id="Contact" data-en="Contact">Contact</span></a></li>
         </ul>
     </nav>
 
-    <!-- KONTEN UTAMA KANAN -->
-    <main class="main-content" id="main-content">
+    <!-- CONTENT DISPLAY INTERFACE -->
+    <main class="main-container">
         
-        <!-- HERO SECTION -->
-        <div class="hero-section" id="hero">
-            <h1>Safira Hana R.</h1>
-            <div class="location-info">
-                📍 <span data-id="Semarang, Indonesia" data-en="Semarang, Indonesia">Semarang, Indonesia</span>
+        <!-- HERO OVERVIEW -->
+        <header class="hero-section" id="hero">
+            <div class="status-badge">
+                <span class="pulse-indicator"></span>
+                <span data-id="Available for Full-Time Roles" data-en="Available for Full-Time Roles">Available for Full-Time Roles</span>
             </div>
-            <div class="live-status">
-                <span class="pulse-dot"></span>
-                <span data-id="Open for Full-Time Opportunities" data-en="Open for Full-Time Opportunities">Open for Full-Time Opportunities</span>
-            </div>
-            <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 800px; line-height: 1.8;" data-id="&quot;Nggak obral janji pasti rank satu, tapi siap meracik tulisan yang relevan, awet dibaca, dan pastinya ramah SEO.&quot;" data-en="&quot;No empty promises of instant rank one, but ready to craft relevant, evergreen, and SEO-friendly content.&quot;">
-                "Nggak obral janji pasti rank satu, tapi siap meracik tulisan yang relevan, awet dibaca, dan pastinya ramah SEO."
+            <h1 class="hero-title">Safira Hana R.</h1>
+            <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 750px; line-height: 1.7;" data-id="Menghadirkan struktur konten organik bernilai tinggi, fokus pada metrik <em>evergreen</em>, serta optimalisasi mesin pencari berbasis data analitik." data-en="Architecting high-value organic content frameworks, focusing on evergreen metrics and data-driven search engine optimization.">
+                Menghadirkan struktur konten organik bernilai tinggi, fokus pada metrik <em>evergreen</em>, serta optimalisasi mesin pencari berbasis data analitik.
             </p>
-            <div style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
-                <div class="tag" data-id="11+ Rank 1 Google" data-en="11+ Google Rank 1">11+ Rank 1 Google</div>
-                <div class="tag" data-id="1+ Tahun Pengalaman" data-en="1+ Years Experience">1+ Tahun Pengalaman</div>
-                <div class="tag" data-id="35+ Konten Sosmed" data-en="35+ Social Media Posts">35+ Konten Sosmed</div>
+            <div class="metrics-grid">
+                <div class="metric-chip">11+ Google Rank #1</div>
+                <div class="metric-chip" data-id="1+ Tahun Pengalaman" data-en="1+ Years Experience">1+ Tahun Pengalaman</div>
+                <div class="metric-chip" data-id="35+ Publikasi Digital" data-en="35+ Digital Publications">35+ Publikasi Digital</div>
             </div>
-        </div>
+        </header>
 
-        <!-- ABOUT / TENTANG AKU -->
-        <section id="about">
-            <h2 data-id="📌 Tentang Aku" data-en="📌 About Me">📌 Tentang Aku</h2>
-            <p style="color: var(--text-muted);" data-id="Halo, aku Safira. Sebagai penulis artikel, aku paling suka meracik konten <em>evergreen</em>. Tujuannya simpel aja, supaya artikel yang kutulis bisa terus bermanfaat dan relevan dalam jangka waktu yang lama. Meski begitu, aku tetap terbuka kalau harus nulis konten yang lagi tren." data-en="Hello, I'm Safira. As an article writer, I specialize in crafting <em>evergreen</em> content. The goal is simple: ensuring the articles I write remain useful and relevant over a long period. Nevertheless, I am always open to writing about trending topics.">
-                Halo, aku Safira. Sebagai penulis artikel, aku paling suka meracik konten <em>evergreen</em>. Tujuannya simpel aja, supaya artikel yang kutulis bisa terus bermanfaat dan relevan dalam jangka waktu yang lama. Meski begitu, aku tetap terbuka kalau harus nulis konten yang lagi tren.
+        <!-- WORK PRINCIPLES (PRINSIP KERJA) -->
+        <section id="philosophy">
+            <h2 class="section-heading" data-id="Prinsip Kerja" data-en="Work Principles">Prinsip Kerja</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-id="Fondasi pendekatan strategis dalam mengeksekusi setiap proyek penulisan dan riset konten:" data-en="The foundation of my strategic approach in executing content writing and research projects:">
+                Fondasi pendekatan strategis dalam mengeksekusi setiap proyek penulisan dan riset konten:
             </p>
-            
-            <br>
-
-            <h2 data-id="✨ Prinsip Kerja" data-en="✨ Work Principles">✨ Prinsip Kerja</h2>
-            <ul class="traits-list">
-                <li data-id="🌱 Suka ngulik hal baru" data-en="🌱 Love exploring new things">🌱 Suka ngulik hal baru</li>
-                <li data-id="💬 Terbuka dengan kritik membangun" data-en="💬 Open to constructive criticism">💬 Terbuka dengan kritik membangun</li>
-                <li data-id="🤝 Gampang adaptasi &amp; kerja bareng" data-en="🤝 Adaptable &amp; team player">🤝 Gampang adaptasi &amp; kerja bareng</li>
-                <li data-id="🔍 Rajin riset dan cek fakta" data-en="🔍 Diligent in research &amp; fact-checking">🔍 Rajin riset dan cek fakta</li>
-                <li data-id="⏱️ Komit selesaikan tugas" data-en="⏱️ Committed to completing tasks">⏱️ Komit selesaikan tugas</li>
-            </ul>
+            <div class="metrics-grid">
+                <div class="metric-chip" data-id="🌱 Fokus Konten Evergreen" data-en="🌱 Evergreen Focus">🌱 Fokus Konten Evergreen</div>
+                <div class="metric-chip" data-id="💬 Analitis & Kolaboratif" data-en="💬 Analytical & Collaborative">💬 Analitis & Kolaboratif</div>
+                <div class="metric-chip" data-id="🔍 Berbasis Riset Data" data-en="🔍 Data-Driven Research">🔍 Berbasis Riset Data</div>
+                <div class="metric-chip" data-id="⏱️ Disiplin Eksekusi" data-en="⏱️ Execution Discipline">⏱️ Disiplin Eksekusi</div>
+            </div>
         </section>
 
-        <!-- SEO -->
+        <!-- SEO PERFORMANCE METRICS -->
         <section id="seo">
-            <h2 data-id="Pencapaian SEO" data-en="SEO Achievements">Pencapaian SEO</h2>
-            <p data-id="Deretan artikel organik yang berhasil menembus <strong>Peringkat 1 Google</strong>:" data-en="A portfolio of organic articles that successfully secured <strong>Google Rank #1</strong>:">Deretan artikel organik yang berhasil menembus <strong>Peringkat 1 Google</strong>:</p>
-            <ul style="padding-left: 20px; line-height: 2; color: var(--text-muted); margin-top: 15px;">
-                <li><a href="https://www.goodnewsfromindonesia.id/2024/06/11/8-jenis-serabi-dengan-rasanya-yang-khas-dari-berbagai-daerah-di-indonesia" class="link-out" target="_blank" style="margin-top: 0;">"jenis serabi"</a> — Good News From Indonesia</li>
-                <li><a href="https://www.sekawanmedia.co.id/blog/tanda-website-kena-hack/" class="link-out" target="_blank" style="margin-top: 0;">"website kena hack"</a> — Sekawan Media</li>
-                <li><a href="https://www.sekawanmedia.co.id/blog/kapan-bisnis-membutuhkan-jasa-pembuatan-aplikasi-custom/" class="link-out" target="_blank" style="margin-top: 0;">"kapan bisnis butuh aplikasi custom"</a> — Sekawan Media</li>
-            </ul>
-            <p class="note-box" data-id="Selain daftar di atas, masih ada puluhan artikel organik lainnya yang sukses berhasil tembus halaman pertama Google." data-en="Besides the list above, dozens of other organic articles have successfully reached the first page of Google.">
-                Selain daftar di atas, masih ada puluhan artikel organik lainnya yang sukses berhasil tembus halaman pertama Google.
+            <h2 class="section-heading" data-id="SEO Performance" data-en="SEO Performance">SEO Performance</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-id="Portofolio artikel organik yang berhasil mengamankan posisi <strong>Peringkat 1 Google</strong>:" data-en="A portfolio of organic articles successfully securing <strong>Google Rank #1</strong>:">
+                Portofolio artikel organik yang berhasil mengamankan posisi <strong>Peringkat 1 Google</strong>:
             </p>
+            <div class="list-container">
+                <div class="list-box">
+                    <strong>"jenis serabi"</strong>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Good News From Indonesia</span>
+                    <a href="https://www.goodnewsfromindonesia.id/2024/06/11/8-jenis-serabi-dengan-rasanya-yang-khas-dari-berbagai-daerah-di-indonesia" class="external-link" target="_blank">Verify Publication &rarr;</a>
+                </div>
+                <div class="list-box">
+                    <strong>"website kena hack"</strong>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Sekawan Media</span>
+                    <a href="https://www.sekawanmedia.co.id/blog/tanda-website-kena-hack/" class="external-link" target="_blank">Verify Publication &rarr;</a>
+                </div>
+                <div class="list-box">
+                    <strong>"kapan bisnis butuh aplikasi custom"</strong>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Sekawan Media</span>
+                    <a href="https://www.sekawanmedia.co.id/blog/kapan-bisnis-membutuhkan-jasa-pembuatan-aplikasi-custom/" class="external-link" target="_blank">Verify Publication &rarr;</a>
+                </div>
+            </div>
+            <div class="info-callout" data-id="*Di luar pencapaian di atas, puluhan artikel organik lainnya secara konsisten mendominasi halaman pertama mesin pencari untuk berbagai kata kunci kompetitif." data-en="*Beyond the milestones above, dozens of other organic articles consistently dominate search engine first pages for competitive keywords.">
+                *Di luar pencapaian di atas, puluhan artikel organik lainnya secara konsisten mendominasi halaman pertama mesin pencari untuk berbagai kata kunci kompetitif.
+            </div>
         </section>
 
-        <!-- PORTFOLIO -->
+        <!-- PORTFOLIO ARCHITECTURE -->
         <section id="portfolio">
-            <h2 data-id="Portofolio Web" data-en="Web Portfolio">Portofolio Web</h2>
-            <div class="grid-2">
-                <!-- 1. GNFI -->
-                <div class="card" style="grid-column: 1 / -1;">
-                    <h3>Good News From Indonesia</h3>
-                    <span class="tag" data-id="Sosbud & Wisata" data-en="Culture & Travel">Sosbud & Wisata</span> <span class="tag">Evergreen</span>
+            <h2 class="section-heading" data-id="Digital Portfolio" data-en="Digital Portfolio">Digital Portfolio</h2>
+            <div class="grid-layout">
+                <!-- GNFI -->
+                <div class="card-container span-full">
+                    <span class="tag-pill">Culture & Travel</span>
+                    <span class="tag-pill">Evergreen</span>
+                    <h3 class="card-title">Good News From Indonesia</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);" data-id="Meracik artikel evergreen seputar sosial budaya dan sejarah." data-en="Crafting evergreen articles on culture and history.">Meracik artikel evergreen seputar sosial budaya dan sejarah.</p>
-                    <a href="https://www.goodnewsfromindonesia.id/u/safirhn1" class="link-out" target="_blank">Author Page &rarr;</a>
+                    <a href="https://www.goodnewsfromindonesia.id/u/safirhn1" class="external-link" target="_blank">Access Author Profile &rarr;</a>
                 </div>
-                <!-- 2. SEKAWAN MEDIA -->
-                <div class="card">
-                    <h3>Sekawan Media</h3>
-                    <span class="tag">B2B Tech</span> <span class="tag">Software</span>
+                <!-- SEKAWAN MEDIA -->
+                <div class="card-container">
+                    <span class="tag-pill">B2B Tech</span>
+                    <span class="tag-pill">Software</span>
+                    <h3 class="card-title">Sekawan Media</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);" data-id="Membahas topik teknis seputar website dan software menjadi artikel edukatif." data-en="Translating technical software topics into educational articles.">Membahas topik teknis seputar website dan software menjadi artikel edukatif.</p>
-                    <a href="https://www.sekawanmedia.co.id/author/safira_content_intern_skwn2026/" class="link-out" target="_blank">Author Page &rarr;</a>
+                    <a href="https://www.sekawanmedia.co.id/author/safira_content_intern_skwn2026/" class="external-link" target="_blank">Access Author Profile &rarr;</a>
                 </div>
-                <!-- 3. SITESPIRIT -->
-                <div class="card">
-                    <h3>SiteSpirit</h3>
-                    <span class="tag" data-id="Tech & Website" data-en="Tech & Website">Tech & Website</span> <span class="tag">SEO Content</span>
+                <!-- SITESPIRIT -->
+                <div class="card-container">
+                    <span class="tag-pill">Tech & Website</span>
+                    <span class="tag-pill">SEO Content</span>
+                    <h3 class="card-title">SiteSpirit</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);" data-id="Menyusun rubrik artikel informatif terkait industri teknologi." data-en="Developing informative rubrics regarding the tech industry.">Menyusun rubrik artikel informatif terkait industri teknologi.</p>
-                    <a href="https://sitespirit.co/author/safira_content_intern26/" class="link-out" target="_blank">Author Page &rarr;</a>
+                    <a href="https://sitespirit.co/author/safira_content_intern26/" class="external-link" target="_blank">Access Author Profile &rarr;</a>
                 </div>
-                <!-- 4. CAMPUSNET -->
-                <div class="card" style="grid-column: 1 / -1;">
-                    <h3>CampusNet</h3>
-                    <span class="tag" data-id="Social Media" data-en="Social Media">Social Media</span> <span class="tag" data-id="Edukasi" data-en="Education">Edukasi</span>
+                <!-- CAMPUSNET -->
+                <div class="card-container span-full">
+                    <span class="tag-pill">Social Media</span>
+                    <span class="tag-pill">Education</span>
+                    <h3 class="card-title">CampusNet</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);" data-id="Merancang konten carousel Instagram edukatif seputar tips mahasiswa, organisasi akademik, dan rekomendasi buku metodologi riset." data-en="Designing educational Instagram carousel content about student tips, academic organizations, and research methodology book recommendations.">Merancang konten carousel Instagram edukatif seputar tips mahasiswa, organisasi akademik, dan rekomendasi buku metodologi riset.</p>
                 </div>
             </div>
         </section>
 
-        <!-- TOOLS & KEAHLIAN -->
-        <section id="tools">
-            <h2 data-id="Tools & Keahlian SEO" data-en="Tools & SEO Skills">Tools & Keahlian SEO</h2>
-            <p style="color: var(--text-muted); margin-bottom: 20px;" data-id="Perangkat dan platform yang biasa digunakan untuk riset, analisis, dan produksi konten:" data-en="Tools and platforms commonly used for research, analysis, and content production:">Perangkat dan platform yang biasa digunakan untuk riset, analisis, dan produksi konten:</p>
-            <div class="traits-list">
-                <li>📊 Google Search Console</li>
-                <li>📈 Google Trends</li>
-                <li>🔍 Ahrefs & SEMrush</li>
-                <li>💡 Ubersuggest</li>
-                <li>📝 Google Workspace & Notion</li>
-                <li>✍️ Grammarly & AI Assistant</li>
+        <!-- TECH STACK & TOOLS -->
+        <section id="stack">
+            <h2 class="section-heading" data-id="Tools & Technical Stack" data-en="Tools & Technical Stack">Tools & Technical Stack</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-id="Infrastruktur perangkat lunak dan analitik yang digunakan dalam operasional harian:" data-en="Software and analytics infrastructure utilized in daily operations:">
+                Infrastruktur perangkat lunak dan analitik yang digunakan dalam operasional harian:
+            </p>
+            <div class="metrics-grid">
+                <div class="metric-chip">📊 Google Search Console</div>
+                <div class="metric-chip">📈 Google Trends</div>
+                <div class="metric-chip">🔍 Ahrefs & SEMrush</div>
+                <div class="metric-chip">💡 Ubersuggest</div>
+                <div class="metric-chip">📝 Google Workspace & Notion</div>
+                <div class="metric-chip">✍️ Grammarly & AI Assistant</div>
             </div>
         </section>
 
-        <!-- EDUCATION & CERTS -->
-        <section id="education">
-            <h2 data-id="Pendidikan & Sertifikasi" data-en="Education & Certifications">Pendidikan & Sertifikasi</h2>
+        <!-- CREDENTIALS -->
+        <section id="credentials">
+            <h2 class="section-heading" data-id="Credentials & Education" data-en="Credentials & Education">Credentials & Education</h2>
             
-            <div class="list-group">
-                <h3 data-id="Pendidikan Formal" data-en="Formal Education">Pendidikan Formal</h3>
-                <div class="list-item">
+            <p style="font-weight: 600; color: #818CF8; margin-bottom: 1rem; font-size: 0.9rem;" data-id="Pendidikan Formal" data-en="Formal Education">Pendidikan Formal</p>
+            <div class="list-container" style="margin-bottom: 2rem;">
+                <div class="list-box">
                     <strong data-id="S1 Sosiologi — Universitas Terbuka" data-en="Bachelor in Sociology — Universitas Terbuka">S1 Sosiologi — Universitas Terbuka</strong>
-                    <span style="font-size: 0.9rem; color: var(--text-muted);" data-id="Fokus pada analisis tren sosial, struktur masyarakat, dan perilaku audiens." data-en="Focus on social trends analysis and audience behavior.">Fokus pada analisis tren sosial, struktur masyarakat, dan perilaku audiens.</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);" data-id="Fokus pada analisis tren sosial, struktur masyarakat, dan perilaku audiens." data-en="Focus on social trends analysis and audience behavior.">Fokus pada analisis tren sosial, struktur masyarakat, dan perilaku audiens.</span>
                 </div>
             </div>
 
-            <div class="list-group">
-                <h3 data-id="Sertifikasi & Pelatihan" data-en="Certifications & Training">Sertifikasi & Pelatihan</h3>
-                <div class="list-item">
+            <p style="font-weight: 600; color: #818CF8; margin-bottom: 1rem; font-size: 0.9rem;" data-id="Sertifikasi & Pelatihan" data-en="Certifications & Training">Sertifikasi & Pelatihan</p>
+            <div class="list-container">
+                <div class="list-box">
                     <strong>GNFI Writing Camp Batch 1</strong>
-                    <span style="font-size: 0.9rem; color: var(--text-muted);" data-id="Pelatihan intensif penulisan artikel SEO dan jurnalistik dasar." data-en="Intensive training in SEO article writing and basic journalism.">Pelatihan intensif penulisan artikel SEO dan jurnalistik dasar.</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);" data-id="Pelatihan intensif penulisan artikel SEO dan jurnalistik dasar." data-en="Intensive training in SEO article writing and basic journalism.">Pelatihan intensif penulisan artikel SEO dan jurnalistik dasar.</span>
                 </div>
-                <div class="list-item">
+                <div class="list-box">
                     <strong>GNFI x Future Skills</strong>
-                    <span style="font-size: 0.9rem; color: var(--text-muted);" data-id="Program pengembangan penulisan strategis sesuai kaidah PUEBI." data-en="Strategic writing program aligned with Indonesian language standards (PUEBI).">Program pengembangan penulisan strategis sesuai kaidah PUEBI.</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);" data-id="Program pengembangan penulisan strategis sesuai kaidah PUEBI." data-en="Strategic writing program aligned with Indonesian language standards (PUEBI).">Program pengembangan penulisan strategis sesuai kaidah PUEBI.</span>
                 </div>
-                <div class="list-item">
+                <div class="list-box">
                     <strong>Wikilatih Daring</strong>
-                    <span style="font-size: 0.9rem; color: var(--text-muted);" data-id="Menulis artikel berbasis ensiklopedis dengan kaidah bahasa Indonesia baku." data-en="Writing encyclopedia-based articles with standard Indonesian rules.">Menulis artikel berbasis ensiklopedis dengan kaidah bahasa Indonesia baku.</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);" data-id="Menulis artikel berbasis ensiklopedis dengan kaidah bahasa Indonesia baku." data-en="Writing encyclopedia-based articles with standard Indonesian rules.">Menulis artikel berbasis ensiklopedis dengan kaidah bahasa Indonesia baku.</span>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
+        <!-- CONTACT & CTA -->
         <section id="contact">
             <div class="cta-box">
-                <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin-bottom: 5px;" data-id="Mari Berkolaborasi" data-en="Let's Collaborate">Mari Berkolaborasi</h3>
-                <p style="margin-bottom: 20px; color: var(--text-muted);" data-id="Terbuka untuk peluang full-time di bidang penulisan dan SEO." data-en="Open to full-time opportunities in writing and SEO.">Terbuka untuk peluang full-time di bidang penulisan dan SEO.</p>
-                <div>
-                    <a href="mailto:safirahana.r@gmail.com" class="btn" data-id="Kirim Email" data-en="Send Email">Kirim Email</a>
-                    <a href="https://www.linkedin.com/" class="btn linkedin" target="_blank" data-id="Profil LinkedIn" data-en="LinkedIn Profile">Profil LinkedIn</a>
+                <h3 style="font-size: 1.8rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px;" data-id="Mari Berkolaborasi" data-en="Let's Collaborate">Mari Berkolaborasi</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;" data-id="Terbuka untuk peluang full-time di bidang penulisan dan SEO." data-en="Open to full-time opportunities in writing and SEO.">Terbuka untuk peluang full-time di bidang penulisan dan SEO.</p>
+                <div class="btn-group">
+                    <a href="mailto:safirahana.r@gmail.com" class="btn-action" data-id="Kirim Email" data-en="Send Email">Kirim Email</a>
+                    <a href="https://www.linkedin.com/" class="btn-action secondary" target="_blank" data-id="LinkedIn" data-en="LinkedIn">LinkedIn</a>
                 </div>
             </div>
         </section>
@@ -425,23 +661,23 @@
             });
         }
 
-        // Highlight active menu on scroll
-        const sections = document.querySelectorAll('section, .hero-section');
-        const navLinks = document.querySelectorAll('.nav-links a');
+        // Active state observer for navigation
+        const sections = document.querySelectorAll('section, header');
+        const navItems = document.querySelectorAll('.nav-navigation .nav-item');
 
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 150) {
+                if (window.pageYOffset >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }
             });
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + current) {
+                    item.classList.add('active');
                 }
             });
         });
